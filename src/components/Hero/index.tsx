@@ -15,7 +15,7 @@ export function Hero() {
     },
     {
       text: "Maya WebTech.",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-red-700 dark:text-red-700",
     },
   ];
   return (
@@ -30,12 +30,17 @@ export function Hero() {
         }}
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
+        <div className="leadingTechHero">
+          <div className="leadingTechHeroSubDiv border-solid border-2 border-red-700 rounded-xl px-5">
+            Leading Tech
+          </div>
+        </div>
         <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
           Your one-stop solution
           <br />
-          {/* <div className="font-medium mt-2">
+          <div className="font-medium mt-2">
             <FlipWords words={words} />
-          </div> */}
+          </div>
         </div>
         <div className="">
           <TypewriterEffectSmooth
@@ -44,11 +49,11 @@ export function Hero() {
           />
         </div>
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-          <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
-            Join now
+          <button className="w-40 h-10 rounded-xl bg-red-700 border dark:border-white border-transparent text-white text-sm">
+            Get Started
           </button>
-          <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
-            Signup
+          <button className="w-40 h-10 rounded-xl bg-white text-red-700 border border-red-700  text-sm">
+            Contact Us
           </button>
         </div>
       </motion.div>

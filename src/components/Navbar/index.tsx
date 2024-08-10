@@ -14,6 +14,7 @@ import {
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./index.css";
 import { components } from "@/constants/navConstant";
@@ -246,7 +247,10 @@ export function Navbar() {
         </ul>
       </div>
       <div className="rightButtonNav">
-        <button className="rightMenuButton">Book Demo</button>
+      <button className=" rightMenuButton flex items-center gap-1 shadow-[0_4px_14px_0_rgb(0,0,0,10%)] hover:shadow-[0_6px_20px_rgba(93,93,93,23%)] px-8 py-2 bg-[#fff] text-[#696969] rounded-md font-light transition duration-200 ease-linear">
+        Book Demo
+        <MdArrowOutward />
+      </button>
         {isDrawerOpen ? (
           <IoMdClose
             fontSize={25}
