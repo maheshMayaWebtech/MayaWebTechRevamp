@@ -18,6 +18,7 @@ import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./index.css";
 import { components } from "@/constants/navConstant";
+import { Button } from "../ui/moving-border";
 
 export function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -54,9 +55,9 @@ export function Navbar() {
     >
       <div className="leftNavLogo">
         <img
-          src="https://res.cloudinary.com/dqcr5yn0b/image/upload/v1723265292/maya_lmuby5.png"
+          src="https://res.cloudinary.com/dqcr5yn0b/image/upload/v1723439646/mayaWebTechLogoMain_wyrfzt.png"
           alt="logo"
-          width={70}
+          height={45}
         />
       </div>
       <div className="navItemsMid">
@@ -165,9 +166,10 @@ export function Navbar() {
             }}
           >
             <img
-              src="https://res.cloudinary.com/dqcr5yn0b/image/upload/v1723265292/maya_lmuby5.png"
+              src="https://res.cloudinary.com/dqcr5yn0b/image/upload/v1723439646/mayaWebTechLogoMain_wyrfzt.png"
               alt="logo"
-              width={70}
+              width={100}
+              className="mb-4"
             />
           </li>
           <li>
@@ -247,7 +249,7 @@ export function Navbar() {
         </ul>
       </div>
       <div className="rightButtonNav">
-      <button className=" rightMenuButton flex items-center gap-1 shadow-[0_4px_14px_0_rgb(0,0,0,10%)] hover:shadow-[0_6px_20px_rgba(93,93,93,23%)] px-8 py-2 bg-[#fff] text-[#696969] rounded-md font-light transition duration-200 ease-linear">
+      <button className=" rightMenuButton flex items-center gap-1 shadow-[0_4px_14px_0_rgb(0,0,0,10%)] hover:shadow-[0_6px_20px_rgba(93,93,93,23%)] px-6 py-1 bg-[#fff] text-[#696969] rounded-md font-light transition duration-200 ease-linear">
         Book Demo
         <MdArrowOutward />
       </button>

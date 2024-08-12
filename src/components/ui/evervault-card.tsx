@@ -11,14 +11,18 @@ export const EvervaultCard = ({
   text?: string;
   className?: string;
 }) => {
-  let mouseX = useMotionValue(0);
-  let mouseY = useMotionValue(0);
+  let mouseX = useMotionValue(150); // Initial position for the effect
+  let mouseY = useMotionValue(150); // Initial position for the effect
 
   const [randomString, setRandomString] = useState("");
+  const [isHovered, setIsHovered] = useState(true); // Initially true for the first 5 seconds
 
   useEffect(() => {
     let str = generateRandomString(1500);
     setRandomString(str);
+
+      setIsHovered(true);
+
   }, []);
 
   function onMouseMove({ currentTarget, clientX, clientY }: any) {
@@ -28,12 +32,13 @@ export const EvervaultCard = ({
 
     const str = generateRandomString(1500);
     setRandomString(str);
+    // setIsHovered(true); 
   }
 
   return (
     <div
       className={cn(
-        "p-0.5  bg-transparent aspect-square  flex items-center justify-center w-full h-full relative",
+        "p-0.5 bg-transparent aspect-square flex items-center justify-center w-full h-full relative",
         className
       )}
     >
@@ -45,9 +50,10 @@ export const EvervaultCard = ({
           mouseX={mouseX}
           mouseY={mouseY}
           randomString={randomString}
+          isHovered={isHovered}
         />
         <div className="relative z-10 flex items-center justify-center">
-          <div className="relative h-44 w-44  rounded-full flex items-center justify-center text-white font-bold text-4xl">
+          <div className="relative h-44 w-44 rounded-full flex items-center justify-center text-white font-bold text-4xl">
             <div className="absolute w-full h-full bg-white/[0.8] dark:bg-black/[0.8] blur-sm rounded-full" />
             <span className="dark:text-white text-black z-20">{text}</span>
           </div>
@@ -57,7 +63,12 @@ export const EvervaultCard = ({
   );
 };
 
-export function CardPattern({ mouseX, mouseY, randomString }: any) {
+export function CardPattern({
+  mouseX,
+  mouseY,
+  randomString,
+  isHovered,
+}: any) {
   let maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
   let style = { maskImage, WebkitMaskImage: maskImage };
 
@@ -65,11 +76,15 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
     <div className="pointer-events-none">
       <div className="absolute inset-0 rounded-2xl  [mask-image:linear-gradient(white,transparent)] group-hover/card:opacity-50"></div>
       <motion.div
-        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-rose-400 to-pink-600 opacity-0  group-hover/card:opacity-100 backdrop-blur-xl transition duration-500"
+        className={`absolute inset-0 rounded-2xl bg-gradient-to-r from-rose-400 to-pink-600 ${
+          isHovered ? "opacity-100" : "opacity-0"
+        } group-hover/card:opacity-100 backdrop-blur-xl transition duration-500`}
         style={style}
       />
       <motion.div
-        className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay  group-hover/card:opacity-100"
+        className={`absolute inset-0 rounded-2xl mix-blend-overlay ${
+          isHovered ? "opacity-100" : "opacity-0"
+        } group-hover/card:opacity-100`}
         style={style}
       >
         <p className="absolute inset-x-0 text-xs h-full break-words whitespace-pre-wrap text-white font-mono font-bold transition duration-500">

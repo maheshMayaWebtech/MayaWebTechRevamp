@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { AuroraBackground } from "../ui/aurora-background";
 import { FlipWords } from "../ui/flip-words";
 import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
-import './index.css'
+import "./index.css";
+import { Badge } from "../ui/badge";
 
 export function Hero() {
   const words = ["Websites", "Apps", "SEO", "Marketing"];
@@ -22,7 +23,7 @@ export function Hero() {
     <AuroraBackground>
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
-        whileInView={{ opacity: 1, y: 80 }}
+        whileInView={{ opacity: 1, y: -80 }}
         transition={{
           delay: 0.3,
           duration: 0.8,
@@ -31,9 +32,7 @@ export function Hero() {
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
         <div className="leadingTechHero">
-          <div className="leadingTechHeroSubDiv border-solid border-2 border-red-700 rounded-xl px-5">
-            Leading Tech
-          </div>
+          <Badge className="px-8 py-2" variant="secondary">Leading Tech</Badge>
         </div>
         <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
           Your one-stop solution
