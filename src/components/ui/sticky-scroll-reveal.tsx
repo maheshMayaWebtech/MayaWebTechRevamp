@@ -65,7 +65,7 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: 'white',
       }}
-      className="h-[30rem] overflow-y-auto flex justify-evenly relative space-x-10 rounded-md p-10 scrollbar-hide"
+      className="h-[24rem] overflow-y-auto flex justify-evenly relative space-x-10 rounded-md p-10 scrollbar-hide"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">

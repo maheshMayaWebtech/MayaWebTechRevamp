@@ -4,7 +4,7 @@ const content = [
   {
     title: "1. Select a Project",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      "Discover the ideal project that aligns with your goals and unlock the potential for transformative success. Our selection process emphasizes innovation, strategic planning, and cost-effectiveness to ensure optimal outcomes.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
         Project Selection
@@ -14,7 +14,7 @@ const content = [
   {
     title: "2. Project Analysis",
     description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      "Gain deep insights into your project's potential through comprehensive analysis. We evaluate every aspect with precision, leveraging data-driven metrics to craft a strategy that maximizes efficiency and impact.",
       content: (
         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
           Project Analysis
@@ -24,7 +24,7 @@ const content = [
   {
     title: "3. Execution",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Seamlessly transition from planning to action with our robust execution strategies. We focus on delivering high-quality results through meticulous management and innovative solutions that meet your project’s objectives.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
         Project Execution
@@ -34,7 +34,7 @@ const content = [
   {
     title: "4. Delivery",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Achieve excellence with our commitment to on-time, high-quality delivery. Our approach integrates advanced metrics and cost-effective solutions to ensure your project’s successful completion and long-term success.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
         Project Delivery
