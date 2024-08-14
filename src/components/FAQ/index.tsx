@@ -73,7 +73,7 @@ export function FAQ() {
       >
         {qna.map((item, index) => {
           return (
-            <AccordionItem value={`item-${index + 1}`}>
+            <AccordionItem value={`item-${index + 1}`} key={index}>
               <AccordionTrigger>{item.ques}</AccordionTrigger>
               <AccordionContent>{item.ans}</AccordionContent>
             </AccordionItem>

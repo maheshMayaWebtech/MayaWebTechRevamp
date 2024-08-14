@@ -1,0 +1,9 @@
+.letsTalkFooterMain {
+    background-image: url('../../../public//bg-gradiant.jpg');
+    background-size: auto 600px;
+}
+@media (max-width: 768px) {
+    .letsTalkFooterMain {
+        background-size: 300px 300px;
+    }
+}

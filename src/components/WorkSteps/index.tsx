@@ -44,7 +44,7 @@ const content = [
 ];
 export function WorkSteps() {
   return (
-    <div className="mt-12">
+    <div className="mt-12 bg-gradient-to-r from-violet-50 to-fuchsia-50 pt-4 pb-20">
         <div className="text-3xl md:text-5xl font-medium dark:text-white text-center mb-16">
         Our Workflow: From <span className="font-bold text-red-700"> Vision to Reality </span>
         </div>

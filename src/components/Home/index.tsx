@@ -7,19 +7,25 @@ import Steps from "../Steps";
 import { WorkShow } from "../WorkShow";
 import { WorkSteps } from "../WorkSteps";
 import { FAQ } from "../FAQ";
+import LetsTalkFooter from "../LetsTalkFooter";
+import { WorkFlows } from "../WorkFlows";
+import WhyChooseUsHome from "../WhyChooseUsHome";
 
 const Home = () => {
   return (
     <>
       <Hero />
       <CompaniesServed />
+      <WhyChooseUsHome />
       <Steps />
+      <WorkFlows />
       <ServiceRequirements />
       <MovingCards />
-      <WorkSteps />
+      {/* <WorkSteps /> */}
       <WorkShow />
       <HighlightHero />
       <FAQ />
+      <LetsTalkFooter />
     </>
   );
 }

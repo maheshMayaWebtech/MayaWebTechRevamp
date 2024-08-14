@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import '../WorkSteps/index.css'
+import "../WorkSteps/index.css";
 
 export const StickyScroll = ({
   content,
@@ -63,9 +63,10 @@ export const StickyScroll = ({
   return (
     <motion.div
       animate={{
-        backgroundColor: 'white',
+        backgroundColor: "transparent",
+        boxShadow: "0 0 10px 0 #0000001c",
       }}
-      className="h-[24rem] overflow-y-auto flex justify-evenly relative space-x-10 rounded-md p-10 scrollbar-hide"
+      className="h-[24rem] w-4/5 overflow-y-auto mx-auto flex justify-evenly relative space-x-10 rounded-md p-1 sm:p-10 scrollbar-hide"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
