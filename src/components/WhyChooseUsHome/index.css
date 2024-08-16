@@ -2,16 +2,16 @@
     background-image: url('../../../public/bg-gradiant.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
-    display: grid;
-    grid-template-columns: 6fr 4fr;
+    /* display: grid;
+    grid-template-columns: 6fr 4fr; */
 }
 .whyChooseUsLogo {
     width: 100%;
 }
 @media (max-width: 768px) {
     .whyChooseHome {
-        display: flex;
-        flex-direction: column-reverse;
+        /* display: flex;
+        flex-direction: column-reverse; */
         background-size: 100% 100%;
     }
     .whyChooseUsLogo {

@@ -10,6 +10,7 @@ import { FAQ } from "../FAQ";
 import LetsTalkFooter from "../LetsTalkFooter";
 import { WorkFlows } from "../WorkFlows";
 import WhyChooseUsHome from "../WhyChooseUsHome";
+import ReviewHome from "../ReviewHome";
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
       {/* <WorkSteps /> */}
       <WorkShow />
       <HighlightHero />
+      <ReviewHome />
       <FAQ />
       <LetsTalkFooter />
     </>

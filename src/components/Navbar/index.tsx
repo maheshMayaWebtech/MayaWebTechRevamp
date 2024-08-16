@@ -18,7 +18,6 @@ import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./index.css";
 import { components } from "@/constants/navConstant";
-import { Button } from "../ui/moving-border";
 
 export function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -76,37 +75,57 @@ export function Navbar() {
                 Services
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] ">
+                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[700px] lg:grid-cols-[.75fr_1fr] ">
                   <li className="row-span-3 ">
                     <NavigationMenuLink asChild>
                       <a
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                         href="/"
                       >
-                        <Icons.logo className="h-6 w-6" />
+                        {/* <Icons.logo className="h-6 w-6" /> */}
                         <div className="mb-2 mt-4 text-lg font-medium">
-                          shadcn/ui
+                          MayaWebTech
                         </div>
                         <p className="text-sm leading-tight text-muted-foreground">
-                          Beautifully designed components that you can copy and
-                          paste into your apps. Accessible. Customizable. Open
-                          Source.
+                          Transform your business with our expert software
+                          development services, delivering innovative solutions
+                          tailored to your unique needs.
                         </p>
                       </a>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem href="/docs" title="Introduction">
-                    Re-usable components built using Radix UI and Tailwind CSS.
-                  </ListItem>
-                  <ListItem href="/docs/installation" title="Installation">
-                    How to install dependencies and structure your app.
-                  </ListItem>
-                  <ListItem
-                    href="/docs/primitives/typography"
-                    title="Typography"
-                  >
-                    Styles for headings, paragraphs, lists...etc
-                  </ListItem>
+                  <div className="flex">
+                    <div>
+                      <ListItem href="/docs" title="Introduction">
+                        Re-usable components built using Radix UI and Tailwind
+                        CSS.
+                      </ListItem>
+                      <ListItem href="/docs/installation" title="Installation">
+                        How to install dependencies and structure your app.
+                      </ListItem>
+                      <ListItem
+                        href="/docs/primitives/typography"
+                        title="Typography"
+                      >
+                        Styles for headings, paragraphs, lists...etc
+                      </ListItem>
+                    </div>
+                    <div>
+                      <ListItem href="/docs" title="Introduction">
+                        Re-usable components built using Radix UI and Tailwind
+                        CSS.
+                      </ListItem>
+                      <ListItem href="/docs/installation" title="Installation">
+                        How to install dependencies and structure your app.
+                      </ListItem>
+                      <ListItem
+                        href="/docs/primitives/typography"
+                        title="Typography"
+                      >
+                        Styles for headings, paragraphs, lists...etc
+                      </ListItem>
+                    </div>
+                  </div>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -115,15 +134,21 @@ export function Navbar() {
                 Industries
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {components.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    >
-                      {component.description}
-                    </ListItem>
+                <ul className="relative grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  {components.map((component, ind) => (
+                    <div className="industriesNavItems" key={ind}>
+                      <span className="industriesNavItemLogo">
+                        {component.icon && <component.icon fontSize={50} />}
+                      </span>
+
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}
+                      >
+                        {component.description}
+                      </ListItem>
+                    </div>
                   ))}
                 </ul>
               </NavigationMenuContent>
@@ -249,10 +274,10 @@ export function Navbar() {
         </ul>
       </div>
       <div className="rightButtonNav">
-      <button className=" rightMenuButton flex items-center gap-1 shadow-[0_4px_14px_0_rgb(0,0,0,10%)] hover:shadow-[0_6px_20px_rgba(93,93,93,23%)] px-6 py-1 bg-[#fff] text-[#696969] rounded-md font-light transition duration-200 ease-linear">
-        Book Demo
-        <MdArrowOutward />
-      </button>
+        <button className=" rightMenuButton flex items-center gap-1 shadow-[0_4px_14px_0_rgb(0,0,0,10%)] hover:shadow-[0_6px_20px_rgba(93,93,93,23%)] px-6 py-1 bg-[#fff] text-[#696969] rounded-md font-light transition duration-200 ease-linear">
+          Book Demo
+          <MdArrowOutward />
+        </button>
         {isDrawerOpen ? (
           <IoMdClose
             fontSize={25}

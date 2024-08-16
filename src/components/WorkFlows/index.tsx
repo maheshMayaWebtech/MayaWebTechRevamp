@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import { motion } from "framer-motion";
 
 interface Step {
   number: string;
@@ -90,12 +91,18 @@ export const WorkFlows: React.FC = () => {
         </div>
       </div>
       <div className="relative flex flex-col items-center space-y-12">
-        {steps.map((step, index) => (
-          <div
+        {steps.map((step, index) => {
+          const isEven = index % 2 === 0;
+          return (
+          <motion.div
             key={index}
             className={`flex w-full ${
-              index % 2 === 0 ? "justify-start" : "justify-end"
-            }`}
+              isEven ? "justify-start" : "justify-end"
+            } z-[9]`}
+            initial={{ opacity: 0, x: isEven ? -50 : 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: true }}
           >
             <div
               className="flex sm:w-1/2  items-center mb-16 rounded-xl"
@@ -123,8 +130,8 @@ export const WorkFlows: React.FC = () => {
                 <p className="text-gray-600 text-sm">{step.description}</p>
               </div>
             </div>
-          </div>
-        ))}
+          </motion.div>
+        )})}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 200 300"
@@ -135,7 +142,7 @@ export const WorkFlows: React.FC = () => {
             stroke="#db2777"
             strokeWidth="2"
             fill="none"
-            strokeDasharray="5,5" 
+            strokeDasharray="5,5"
           />
         </svg>
       </div>

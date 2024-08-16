@@ -1,37 +1,54 @@
-export const components: { title: string; href: string; description: string }[] = [
+import { MdOutlineHealthAndSafety } from "react-icons/md";
+import { MdCastForEducation, MdOutlineTravelExplore } from "react-icons/md";
+import { FaShoppingCart, FaMoneyCheckAlt } from "react-icons/fa";
+import { BsBank } from "react-icons/bs";
+
+export const components: {
+  title: string;
+  href: string;
+  description: string;
+  icon?: any;
+}[] = [
   {
-    title: "Alert Dialog",
+    title: "Health care",
     href: "/docs/primitives/alert-dialog",
+    icon: MdOutlineHealthAndSafety,
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "Empowering healthcare solutions with secure, user-friendly interfaces for critical decision-making.",
   },
   {
-    title: "Hover Card",
+    title: "Education",
     href: "/docs/primitives/hover-card",
+    icon: MdCastForEducation,
     description:
-      "For sighted users to preview content available behind a link.",
+      "Innovative educational platforms designed to enhance learning experiences and engagement.",
   },
   {
-    title: "Progress",
+    title: "Hospitality & Tourism",
     href: "/docs/primitives/progress",
+    icon: MdOutlineTravelExplore,
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "Streamlining operations and enhancing customer experiences in the hospitality and tourism sectors.",
   },
   {
-    title: "Scroll-area",
+    title: "E-Commerce",
     href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    icon: FaShoppingCart,
+    description:
+      "Robust e-commerce solutions that drive sales and improve customer journeys.",
   },
   {
-    title: "Tabs",
+    title: "Banking",
     href: "/docs/primitives/tabs",
+    icon: BsBank,
     description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "Secure banking applications that offer seamless, user-friendly financial services.",
   },
   {
-    title: "Tooltip",
+    title: "Fintech",
     href: "/docs/primitives/tooltip",
+    icon: FaMoneyCheckAlt,
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "Cutting-edge fintech solutions that provide insightful, real-time financial data and analytics.",
   },
 ];

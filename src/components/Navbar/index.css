@@ -147,6 +147,16 @@
 .mSiteMenu {
   display: none;
 }
+.industriesNavItemLogo {
+  position: absolute;
+  color: rgba(128, 0, 0, 0.053);
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+.industriesNavItems:hover .industriesNavItemLogo {
+  margin-left: 30px;
+}
+
 @media (max-width: 1000px) {
   .leftNavLogo img {
     min-width: 50px !important;
