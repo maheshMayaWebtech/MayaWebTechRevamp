@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { HoverEffect } from "../ui/card-hover-effect";
+import { motion } from "framer-motion";
 import { Button } from "../ui/moving-border";
 import './index.css'
 
@@ -10,7 +11,14 @@ export function ServiceRequirements() {
         One-Stop Destination for All Your{" "}
         <span className=" font-bold text-red-700"> Businesses </span>
       </div>
-      <HoverEffect items={projects} />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <HoverEffect items={projects} />
+      </motion.div>
       <Link to={"/docs"}>
         <Button
           borderRadius="1.75rem"

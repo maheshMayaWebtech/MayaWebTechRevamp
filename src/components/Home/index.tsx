@@ -11,6 +11,7 @@ import LetsTalkFooter from "../LetsTalkFooter";
 import { WorkFlows } from "../WorkFlows";
 import WhyChooseUsHome from "../WhyChooseUsHome";
 import ReviewHome from "../ReviewHome";
+import ServiceCards from "@/common/ServiceCards";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
       <HighlightHero />
       <ReviewHome />
       <FAQ />
+      <ServiceCards />
       <LetsTalkFooter />
     </>
   );

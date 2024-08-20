@@ -14,6 +14,7 @@ import {
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./index.css";
@@ -78,10 +79,7 @@ export function Navbar() {
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[700px] lg:grid-cols-[.75fr_1fr] ">
                   <li className="row-span-3 ">
                     <NavigationMenuLink asChild>
-                      <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        href="/"
-                      >
+                      <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
                         {/* <Icons.logo className="h-6 w-6" /> */}
                         <div className="mb-2 mt-4 text-lg font-medium">
                           MayaWebTech
@@ -91,36 +89,42 @@ export function Navbar() {
                           development services, delivering innovative solutions
                           tailored to your unique needs.
                         </p>
-                      </a>
+                        <button className="bg-red-700 py-2 mt-4 rounded-lg shadow-lg text-white hover:bg-red-800 transition-all ">
+                          <Link to={"/services"} className="flex items-center justify-center text-center gap-2">
+                            Show All Services{" "}
+                            <FaArrowRightLong className="text-white " />
+                          </Link>
+                        </button>
+                      </div>
                     </NavigationMenuLink>
                   </li>
-                  <div className="flex">
+                  <div className="flex text-left">
                     <div>
-                      <ListItem href="/docs" title="Introduction">
+                      <ListItem href="/services/mobile-development" title="Mobile Development">
                         Re-usable components built using Radix UI and Tailwind
                         CSS.
                       </ListItem>
-                      <ListItem href="/docs/installation" title="Installation">
+                      <ListItem href="/services/web-services" title="Web Services">
                         How to install dependencies and structure your app.
                       </ListItem>
                       <ListItem
-                        href="/docs/primitives/typography"
-                        title="Typography"
+                        href="/services/software-testing"
+                        title="Software Testing"
                       >
                         Styles for headings, paragraphs, lists...etc
                       </ListItem>
                     </div>
                     <div>
-                      <ListItem href="/docs" title="Introduction">
+                      <ListItem href="/services/software-development" title="Software Development">
                         Re-usable components built using Radix UI and Tailwind
                         CSS.
                       </ListItem>
-                      <ListItem href="/docs/installation" title="Installation">
+                      <ListItem href="/services/digital-marketing" title="Digital Marketing">
                         How to install dependencies and structure your app.
                       </ListItem>
                       <ListItem
-                        href="/docs/primitives/typography"
-                        title="Typography"
+                        href="/services/web-hosting"
+                        title="Web Hosting"
                       >
                         Styles for headings, paragraphs, lists...etc
                       </ListItem>
