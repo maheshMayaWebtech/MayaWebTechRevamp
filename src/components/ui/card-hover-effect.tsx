@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 export const HoverEffect = ({
   items,
@@ -9,6 +8,7 @@ export const HoverEffect = ({
 }: {
   items: {
     title: string;
+    subtitle ?: string;
     description: string;
   }[];
   className?: string;
@@ -48,6 +48,7 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card className="bg-white">
             <CardTitle className="text-black">{item.title}</CardTitle>
+            <CardTitle className="text-red-700 text-5xl font-extrabold">{item?.subtitle}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
         </div>

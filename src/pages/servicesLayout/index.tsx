@@ -1,145 +1,12 @@
-import React from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import codingImage from "../../../public/coding.png";
-import {
-  FaCode,
-  FaPaintBrush,
-  FaBullhorn,
-  FaChartLine,
-  FaCogs,
-  FaRobot,
-} from "react-icons/fa";
+import "./index.css";
+import serviceImage from "../../../public/services_image.webp";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import WhyChooseUsHome from "@/components/WhyChooseUsHome";
-
-const services = [
-  {
-    title: "Mobile Development",
-    description:
-      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
-    number: "01",
-    icon: <FaCode />,
-    image: codingImage,
-    whyChooseHeading: "Why Choose Mobile Development?",
-    whyChooseUsItems: [
-      "Experience",
-      "Custom Solutions",
-      "Agile Development",
-      "Support",
-    ],
-  },
-  {
-    title: "Web Services",
-    description:
-      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
-    number: "02",
-    icon: <FaPaintBrush />,
-    image: codingImage,
-    whyChooseHeading: "Why Choose Web Services?",
-    whyChooseUsItems: [
-      "User-Centric Design",
-      "Prototyping",
-      "Testing",
-      "Responsive Design",
-    ],
-  },
-  {
-    title: "Digital Marketing",
-    description:
-      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
-    number: "03",
-    icon: <FaBullhorn />,
-    image: codingImage,
-    whyChooseHeading: "Why Choose Digital Marketing?",
-    whyChooseUsItems: [
-      "SEO Expertise",
-      "Social Media Management",
-      "Content Creation",
-      "Analytics",
-    ],
-  },
-  {
-    title: "Software Development",
-    description:
-      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
-    number: "04",
-    icon: <FaChartLine />,
-    image: codingImage,
-    whyChooseHeading: "Why Choose Software Development?",
-    whyChooseUsItems: [
-      "Data-Driven Insights",
-      "Process Optimization",
-      "Risk Management",
-      "Consulting",
-    ],
-  },
-  {
-    title: "Software Testing",
-    description:
-      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
-    number: "05",
-    icon: <FaCogs />,
-    image: codingImage,
-    whyChooseHeading: "Why Choose Software Testing?",
-    whyChooseUsItems: [
-      "Custom Software",
-      "Maintenance",
-      "Integration",
-      "Security",
-    ],
-  },
-  {
-    title: "Web Hosting",
-    description:
-      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
-    number: "06",
-    icon: <FaRobot />,
-    image: codingImage,
-    whyChooseHeading: "Why Choose Web Hosting?",
-    whyChooseUsItems: [
-      "Predictive Analytics",
-      "Automation",
-      "Data Science Expertise",
-      "Scalability",
-    ],
-  },
-];
-
-const process = [
-  {
-    step: "Discovery",
-    description:
-      "We start by understanding your goals, target audience, and requirements.",
-  },
-  {
-    step: "Planning",
-    description:
-      "We outline the project scope, timelines, and resources needed.",
-  },
-  {
-    step: "Implementation",
-    description:
-      "Our team develops your app using the latest technologies and best practices.",
-  },
-  {
-    step: "Testing",
-    description:
-      "We perform thorough testing to ensure the app is functional and bug-free.",
-  },
-  {
-    step: "Support",
-    description:
-      "Post-launch support to address any issues and optimize performance.",
-  },
-];
-
-const keyFeatures = [
-  "Custom Solutions",
-  "Cross-Platform Development",
-  "Integration Capabilities",
-  "Security First",
-];
+import { features, services } from "@/constants/servicesConstant";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
+import webDemoImage from "../../../public/web_design_demo.webp";
 
 const ServicesLayout = () => {
   const { service } = useParams();
@@ -155,7 +22,7 @@ const ServicesLayout = () => {
 
   const controls = useAnimation();
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (inView) {
       controls.start({ opacity: 1, y: 0 });
     } else {
@@ -165,95 +32,181 @@ const ServicesLayout = () => {
 
   return (
     <div className="min-h-screen bg-white text-black">
-      <div
-        className="flex flex-col sm:flex-row items-center px-4 sm:px-28 py-16 pt-28 sm:pt-36 sm:gap-16 bg-dark-red"
-      >
-        <div className="flex-1 text-left">
+      <div className="serviceLayoutHero flex flex-col sm:flex-row items-center px-4 sm:px-60 py-16 pt-28 sm:pt-36 sm:gap-16 bg-dark-red">
+        <div className="flex-1 text-center">
           <h1 className="text-2xl sm:text-4xl font-bold mb-4">
-            Unlock the Power of{" "}
-            <span className="text-red-700 text-3xl sm:text-5xl">
+            Unlock the Power of <br />
+            <span className="text-red-700 text-3xl sm:text-6xl">
               {" "}
               {serviceContent.title}{" "}
             </span>{" "}
-            with Our Expertise
+            <br />
+            <span className="text-2xl font-normal">with Our Expertise</span>
           </h1>
-          <p className="text-sm text-gray-800 sm:text-xl mb-4">
+          <p className="text-sm text-gray-700 sm:text-lg mb-4 mt-8">
             Welcome to MayaWebTech, your trusted partner for comprehensive{" "}
-            {serviceContent.title} services. In today’s digital landscape,
-            having a robust online presence is crucial for businesses of all
-            sizes. With our {serviceContent.title} expertise, we empower you to
-            harness the full potential of this versatile platform to create
-            stunning websites that captivate your audience and drive results.
+            {serviceContent.title} services. With our {serviceContent.title}{" "}
+            expertise, we empower you to harness the full potential of this
+            versatile platform to create stunning websites that captivate your
+            audience and drive results.
           </p>
-        </div>
-        <div className="flex-1">
-          <img
-            src={serviceContent.image}
-            alt={serviceContent.title}
-            className="w-full h-auto"
-          />
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-8">
+            <button className="w-40 h-10 rounded-xl bg-red-700 border dark:border-white border-transparent text-white text-sm">
+              Get Started
+            </button>
+            <button className="w-40 h-10 rounded-xl bg-white text-red-700 border border-red-700  text-sm">
+              Contact Us
+            </button>
+          </div>
         </div>
       </div>
 
-      <WhyChooseUsHome />
-
       <motion.div
-        className="px-4 sm:px-28 py-16 bg-gray-100"
-        initial={{ opacity: 0 }}
-        animate={controls}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        ref={ref}
+        className="px-4 sm:px-28 py-16 "
+        // initial={{ opacity: 0 }}
+        // animate={controls}
+        // transition={{ duration: 0.5, delay: 0.2 }}
+        // ref={ref}
       >
-        <h2 className="text-3xl font-bold mb-8">Key Features</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {keyFeatures.map((feature, index) => (
+        <h2 className="text-3xl sm:text-5xl font-bold mb-12">Key Features</h2>
+        <div className="flex flex-col gap-20">
+          {serviceContent?.keyFeatures.map((feature, index) => (
             <motion.div
               key={index}
-              className="bg-white border border-gray-200 p-6 rounded-lg shadow-lg flex items-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={controls}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className={`serviceKeyFeatures gap-10 text-left items-center justify-between`}
+              // initial={{ opacity: 0, y: 20 }}
+              // animate={controls}
+              // transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <div className="flex-shrink-0 text-3xl text-dark-red mr-4">
-                <FaCode />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-2">{feature}</h3>
-                <p className="text-gray-600">
-                  Detailed description or benefit of this feature can go here if
-                  needed.
+              <div className="flex flex-col gap-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-red-700 sm:mb-2">
+                  {feature.title}
+                </h3>
+                <h3 className="text-4xl font-semibold sm:font-extrabold mb-2">
+                  {feature.subtitle}
+                </h3>
+                <p className="text-gray-600 sm:text-xl">
+                  {feature.description}
                 </p>
               </div>
+              <div>
+                <img className="" src={serviceImage} alt="serviceImage" />
+              </div>
             </motion.div>
           ))}
         </div>
       </motion.div>
 
-      <motion.div
-        className="px-4 sm:px-28 py-16 bg-gray-100"
-        initial={{ opacity: 0 }}
-        animate={controls}
-        transition={{ duration: 0.5, delay: 0.4 }}
-        ref={ref}
-      >
-        <h2 className="text-3xl font-bold mb-8">Our Process</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {process.map((step, index) => (
-            <motion.div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={controls}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
-              <h3 className="text-xl font-semibold mb-2">{step.step}</h3>
-              <p className="text-gray-700">{step.description}</p>
-            </motion.div>
+      <motion.div className="px-4 sm:px-28 py-16">
+        <h1 className="font-semibold">
+          WHY CHOOSE{" "}
+          <span className="font-bold text-red-700"> MAYAWEBTECH</span>
+        </h1>
+        <h2 className="text-3xl sm:text-5xl font-bold sm:font-semibold mt-3 mb-6">
+          A smarter way to outsource your designs
+        </h2>
+        <h3 className="sm:text-2xl text-gray-600 mb-4 sm:mb-6">
+          {" "}
+          is an all-in-one creative service. For a flat and affordable monthly
+          price you get access to a team of talented designers who can help with
+          all your design projects.
+        </h3>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+        >
+          <HoverEffect items={projects} />
+        </motion.div>
+      </motion.div>
+
+      <div className="planPartService flex flex-col md:flex-row md:items-center md:justify-between sm:text-left py-12 px-4 sm:px-28 bg-white ">
+        <div className="md:w-5/12">
+          <h3 className="text-red-700 font-bold text-sm uppercase mb-4">
+            Make your website standout
+          </h3>
+          <h1 className="text-4xl md:text-4xl font-extrabold text-gray-900 mb-6">
+            Your business deserves an awesome website
+          </h1>
+          <p className="text-lg text-gray-600 mb-8">
+            Attract, engage, and convert potential clients with a professionally
+            designed website or landing page.
+          </p>
+          <button
+            style={{ border: "1px solid" }}
+            className="bg-white text-red-700 border-red-700 font-bold px-6 py-3 hover:bg-red-700 hover:text-white rounded-lg transition duration-300"
+          >
+            Pick Your Plan
+          </button>
+        </div>
+        <div className="md:w-1/2 mt-12 md:mt-0 md:pl-1 space-y-8 text-left">
+          {features.map((feature, index) => (
+            <div className="flex items-start gap-2 sm:gap-6" key={index}>
+              <div className="text-red-700 text-5xl mr-4">
+                {<feature.icon />}
+              </div>
+              <div>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  {feature.title}
+                </h4>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            </div>
           ))}
         </div>
-      </motion.div>
+      </div>
+
+      <div
+        className={`flex flex-col sm:flex-row-reverse w-full gap-4 sm:gap-10 text-left items-center mt-4 sm:mt-32 justify-between px-4 sm:px-28`}
+      >
+        <div className="sm:w-5/12 flex flex-col gap-3 sm:gap-6">
+          <h3 className="text-xl sm:text-2xl font-bold text-red-700 sm:mb-2">
+            Don’t Overpay for Great Web Design
+          </h3>
+          <h3 className="text-5xl font-semibold sm:font-extrabold mb-2">
+            Web design is included in all our plans
+          </h3>
+          <p className="text-gray-600 sm:text-xl">
+            All plans include unlimited requests, unlimited revisions, and
+            source files.
+            All plans include unlimited requests, unlimited revisions, and
+            source files.
+          </p>
+          <button
+            style={{ border: "1px solid" }}
+            className="bg-white text-red-700 border-red-700 font-bold px-6 py-3 hover:bg-red-700 hover:text-white rounded-lg transition duration-300"
+          >
+            Pick Your Plan
+          </button>
+        </div>
+        <div>
+          <img className="" width={600} src={webDemoImage} alt="serviceImage" />
+        </div>
+      </div>
     </div>
   );
 };
 
 export default ServicesLayout;
+
+export const projects = [
+  {
+    title: "STRESS LESS",
+    description:
+      "Crafting visually appealing, responsive websites that deliver seamless user experiences and align with your brand identity.",
+    subtitle: "4.8",
+  },
+  {
+    title: "SHIP FASTER",
+    description:
+      "Developing high-performance, scalable web applications tailored to meet your business needs and enhance user engagement.",
+    subtitle: "24h",
+  },
+  {
+    title: "CUT COSTS",
+    description:
+      "Building innovative software solutions that streamline operations, improve productivity, and drive business growth.",
+    subtitle: "50%",
+  },
+];

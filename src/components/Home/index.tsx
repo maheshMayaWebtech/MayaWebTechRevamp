@@ -28,7 +28,6 @@ const Home = () => {
       <HighlightHero />
       <ReviewHome />
       <FAQ />
-      <ServiceCards />
       <LetsTalkFooter />
     </>
   );
