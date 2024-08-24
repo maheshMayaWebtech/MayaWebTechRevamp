@@ -44,7 +44,7 @@ const ServicesLayout = () => {
             <span className="text-2xl font-normal">with Our Expertise</span>
           </h1>
           <p className="text-sm text-gray-700 sm:text-lg mb-4 mt-8">
-            Welcome to MayaWebTech, your trusted partner for comprehensive{" "}
+            Welcome to Maya Web Tech, your trusted partner for comprehensive{" "}
             {serviceContent.title} services. With our {serviceContent.title}{" "}
             expertise, we empower you to harness the full potential of this
             versatile platform to create stunning websites that captivate your

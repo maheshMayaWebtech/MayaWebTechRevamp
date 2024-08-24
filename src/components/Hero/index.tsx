@@ -15,7 +15,7 @@ export function Hero() {
       text: "with",
     },
     {
-      text: "Maya WebTech.",
+      text: "Maya Web Tech.",
       className: "text-red-700 dark:text-red-700",
     },
   ];

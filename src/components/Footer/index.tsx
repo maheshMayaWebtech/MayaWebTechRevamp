@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="mx-auto px-4 container overflow-hidden flex flex-col lg:flex-row justify-between">
           <a href="/" className="block mr-4 w-1/3">
           <img
-              src="https://res.cloudinary.com/dqcr5yn0b/image/upload/v1723439646/mayaWebTechLogoMain_wyrfzt.png"
+              src="/mayaWebTechLogoMain.png"
               alt="logo"
               width={150}
               className="mb-4"
@@ -54,7 +54,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="pt-4 mt-4 pt-6 text-gray-600 border-t border-gray-800 text-center">© {year} MayaWebTech. All rights reserved.</div>
+        <div className="pt-4 mt-4 pt-6 text-gray-600 border-t border-gray-800 text-center">© {year} Maya Web Tech. All rights reserved.</div>
       </footer>
     </>
   );

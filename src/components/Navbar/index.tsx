@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/icons";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -19,6 +18,7 @@ import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./index.css";
 import { components } from "@/constants/navConstant";
+import mainLogo from '../../../public/mayaWebTechLogoMain.png'
 
 export function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -55,7 +55,7 @@ export function Navbar() {
     >
       <div className="leftNavLogo">
         <img
-          src="https://res.cloudinary.com/dqcr5yn0b/image/upload/v1723439646/mayaWebTechLogoMain_wyrfzt.png"
+          src={mainLogo}
           alt="logo"
           height={45}
         />
@@ -82,7 +82,7 @@ export function Navbar() {
                       <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
                         {/* <Icons.logo className="h-6 w-6" /> */}
                         <div className="mb-2 mt-4 text-lg font-medium">
-                          MayaWebTech
+                          Maya Web Tech
                         </div>
                         <p className="text-sm leading-tight text-muted-foreground">
                           Transform your business with our expert software
@@ -167,7 +167,7 @@ export function Navbar() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
-                href="/docs"
+                href="/about-us"
                 className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent hover:text-slate-500`}
               >
                 About Us
@@ -195,7 +195,7 @@ export function Navbar() {
             }}
           >
             <img
-              src="https://res.cloudinary.com/dqcr5yn0b/image/upload/v1723439646/mayaWebTechLogoMain_wyrfzt.png"
+              src={mainLogo}
               alt="logo"
               width={100}
               className="mb-4"

@@ -84,7 +84,7 @@ const IndustryLayout = () => {
         </div>
         <div className="whyChooseIndustry ">
           <div className="mt-36 text-2xl sm:text-5xl font-semibold mb-4 sm:mb-8 px-4 sm:px-28 pt-20">
-            Why to choose <span className="text-red-700">MayaWebTech </span>{" "}
+            Why to choose <span className="text-red-700">Maya Web Tech </span>{" "}
           </div>
           <div className="text-lg sm:text-xl px-4 sm:px-28">
             Our team of experts possesses extensive knowledge and experience in
