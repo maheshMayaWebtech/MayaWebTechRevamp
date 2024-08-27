@@ -1,4 +1,4 @@
-import React, { useId } from "react";
+import { useId } from "react";
 import { useParams } from "react-router-dom";
 import "./index.css";
 import { industryData } from "@/constants/industry";
@@ -10,7 +10,7 @@ const IndustryLayout = () => {
   const industryContent = industryData[industry as keyof typeof industryData] || industryData["healthcare"];
 
   return (
-    <div className="min-h-screen">
+    <div className="industrySec min-h-screen">
       <div className="mx-auto">
         <div className="relative mb-12 text-center h-[450px] sm:h-[500px] pt-40 industryMain">
           <h1 className="absolute show-title text-6xl sm:text-[180px] z-[-9]">{industryContent.title}</h1>
@@ -49,8 +49,8 @@ const IndustryLayout = () => {
             {industryContent.description}
           </p>
         </div>
-
-        <div className="space-y-20 sm:space-y-48 px-4 sm:px-28">
+        <div className="text-xl sm:text-5xl mb-12">Key Features</div>
+        <div className="allKeyFeaturesIndustries space-y-20 sm:space-y-48 px-4 sm:px-28">
           {industryContent.offerings.map((offering: any, index: number) => (
             <div
               key={index}
@@ -59,6 +59,7 @@ const IndustryLayout = () => {
               } items-center gap-8 flex-col sm:flex-row `}
             >
               <div className="flex-1">
+                <div className="mx-4 px-4 py-2 rounded-sm font-bold text-white bg-red-700 sm:w-3/12 ">Feature {index+1}</div>
                 <div className="p-4">
                   <h3 className="text-3xl font-semibold text-gray-900 mb-2 text-left">
                     {offering.title}
@@ -72,7 +73,7 @@ const IndustryLayout = () => {
                 </div>
               </div>
 
-              <div className="flex-1">
+              <div className="flex-1" style={{display: 'flex', justifyContent: `${(index+1)%2 === 0 ? 'left': 'right'}`}}>
                 <img
                   src={offering.image}
                   alt={offering.title}

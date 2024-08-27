@@ -175,7 +175,7 @@ export function Navbar() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
-                href="/docs"
+                href="/contact-us"
                 className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent hover:text-slate-500`}
               >
                 Contact
@@ -265,15 +265,15 @@ export function Navbar() {
             </Link>
           </li>
           <li>
-            <Link onClick={toggleDrawer} to="/contact">
+            <Link onClick={toggleDrawer} to="/contact-us">
               Contact
             </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact-us">Contact</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact-us">Contact</Link>
           </li>
         </ul>
       </div>
