@@ -1,9 +1,7 @@
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./index.css";
 import serviceImage from "../../../public/services_image.webp";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import { features, services } from "@/constants/servicesConstant";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import webDemoImage from "../../../public/web_design_demo.webp";
@@ -15,26 +13,17 @@ const ServicesLayout = () => {
       (s) => s.title.toLowerCase().replace(/\s+/g, "-") === service
     ) || services[0];
 
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({ opacity: 1, y: 0 });
-    } else {
-      controls.start({ opacity: 0, y: 20 });
-    }
-  }, [inView, controls]);
-
   return (
     <div className="min-h-screen bg-white text-black">
       <div className="serviceLayoutHero flex flex-col sm:flex-row items-center px-4 sm:px-60 py-16 pt-28 sm:pt-36 sm:gap-16 bg-dark-red">
         <div className="flex-1 text-center">
-          <h1 className="text-2xl sm:text-4xl font-bold mb-4">
+          <motion.h1
+            className="text-2xl sm:text-4xl font-bold mb-4"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             Unlock the Power of <br />
             <span className="text-red-700 text-3xl sm:text-6xl">
               {" "}
@@ -42,43 +31,56 @@ const ServicesLayout = () => {
             </span>{" "}
             <br />
             <span className="text-2xl font-normal">with Our Expertise</span>
-          </h1>
-          <p className="text-sm text-gray-700 sm:text-lg mb-4 mt-8">
+          </motion.h1>
+          <motion.p
+            className="text-sm text-gray-700 sm:text-lg mb-4 mt-8"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             Welcome to Maya Web Tech, your trusted partner for comprehensive{" "}
             {serviceContent.title} services. With our {serviceContent.title}{" "}
             expertise, we empower you to harness the full potential of this
             versatile platform to create stunning websites that captivate your
             audience and drive results.
-          </p>
+          </motion.p>
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-8">
-            <button className="w-40 h-10 rounded-xl bg-red-700 border dark:border-white border-transparent text-white text-sm">
+            <motion.button
+              className="w-40 h-10 rounded-xl bg-red-700 border dark:border-white border-transparent text-white text-sm"
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               Get Started
-            </button>
-            <button className="w-40 h-10 rounded-xl bg-white text-red-700 border border-red-700  text-sm">
+            </motion.button>
+            <motion.button
+              className="w-40 h-10 rounded-xl bg-white text-red-700 border border-red-700  text-sm"
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               Contact Us
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
 
-      <motion.div
-        className="px-4 sm:px-28 py-16 "
-        // initial={{ opacity: 0 }}
-        // animate={controls}
-        // transition={{ duration: 0.5, delay: 0.2 }}
-        // ref={ref}
-      >
+      <div className="px-4 sm:px-28 py-16 ">
         <h2 className="text-3xl sm:text-5xl font-bold mb-12">Key Features</h2>
         <div className="flex flex-col gap-20">
           {serviceContent?.keyFeatures.map((feature, index) => (
             <motion.div
               key={index}
               className={`serviceKeyFeatures gap-10 text-left items-center justify-between`}
-              // initial={{ opacity: 0, y: 20 }}
-              // animate={controls}
-              // transition={{ duration: 0.5, delay: index * 0.2 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
             >
-              <div className="flex flex-col gap-3">
+              <motion.div className="flex flex-col gap-3">
                 <h3 className="text-xl sm:text-2xl font-bold text-red-700 sm:mb-2">
                   {feature.title}
                 </h3>
@@ -88,14 +90,14 @@ const ServicesLayout = () => {
                 <p className="text-gray-600 sm:text-xl">
                   {feature.description}
                 </p>
-              </div>
+              </motion.div>
               <div>
                 <img className="" src={serviceImage} alt="serviceImage" />
               </div>
             </motion.div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       <motion.div className="px-4 sm:px-28 py-16">
         <h1 className="font-semibold">
@@ -122,7 +124,7 @@ const ServicesLayout = () => {
       </motion.div>
 
       <div className="planPartService flex flex-col md:flex-row md:items-center md:justify-between sm:text-left py-12 px-4 sm:px-28 bg-white ">
-        <div className="md:w-5/12">
+        <motion.div className="md:w-5/12">
           <h3 className="text-red-700 font-bold text-sm uppercase mb-4">
             Make your website standout
           </h3>
@@ -139,10 +141,17 @@ const ServicesLayout = () => {
           >
             Pick Your Plan
           </button>
-        </div>
+        </motion.div>
         <div className="md:w-1/2 mt-12 md:mt-0 md:pl-1 space-y-8 text-left">
           {features.map((feature, index) => (
-            <div className="flex items-start gap-2 sm:gap-6" key={index}>
+            <motion.div
+              className="flex items-start gap-2 sm:gap-6"
+              key={index}
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true }}
+            >
               <div className="text-red-700 text-5xl mr-4">
                 {<feature.icon />}
               </div>
@@ -152,7 +161,7 @@ const ServicesLayout = () => {
                 </h4>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -169,9 +178,8 @@ const ServicesLayout = () => {
           </h3>
           <p className="text-gray-600 sm:text-xl">
             All plans include unlimited requests, unlimited revisions, and
-            source files.
-            All plans include unlimited requests, unlimited revisions, and
-            source files.
+            source files. All plans include unlimited requests, unlimited
+            revisions, and source files.
           </p>
           <button
             style={{ border: "1px solid" }}
@@ -180,9 +188,14 @@ const ServicesLayout = () => {
             Pick Your Plan
           </button>
         </div>
-        <div>
+        <motion.div
+          initial={{ opacity: 0, scaleX: 2, scaleY: 2, x: -200}}
+          whileInView={{ opacity: 1, scaleX: 1, scaleY: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
           <img className="" width={600} src={webDemoImage} alt="serviceImage" />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

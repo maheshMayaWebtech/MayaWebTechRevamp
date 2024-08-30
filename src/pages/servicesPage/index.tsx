@@ -39,17 +39,35 @@ const ServicesPage: React.FC = () => {
       </section>
       <div className="allItemsCircle relative flex flex-col items-center justify-center bg-cover bg-center">
         <div className="text-center max-w-2xl mx-auto px-4">
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
+          <motion.h1
+            className="text-2xl md:text-4xl font-bold text-gray-800 mb-4"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             A workplace focused on experience and enabling teams to work
             together better
-          </h1>
-          <p className="text-gray-600 mb-6">
+          </motion.h1>
+          <motion.p
+            className="text-gray-600 mb-6"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             How we work is changing, and businesses must find new and better
             ways to communicate.
-          </p>
-          <button className="bg-red-700 text-white py-2 px-6 rounded-lg hover:bg-red-800 transition">
+          </motion.p>
+          <motion.button
+            className="bg-red-700 text-white py-2 px-6 rounded-lg hover:bg-red-800 transition"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             Get Started
-          </button>
+          </motion.button>
         </div>
       </div>
       <section className="py-16 sm:pt-40">
@@ -64,7 +82,13 @@ const ServicesPage: React.FC = () => {
       </section>
       <div className="flex items-center justify-center bg-gradient-to-b from-purple-50  px-28 py-8">
         <div className="flex flex-wrap max-w-screen-xl mx-auto">
-          <div className="w-full sm:w-1/2 py-2 pr-2 relative">
+          <motion.div
+            className="w-full sm:w-1/2 py-2 pr-2 relative"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className="flex flex-col bg-orange-100 p-6 rounded-lg shadow-md h-full relative overflow-hidden">
               <div className="sm:w-4/5 p-4 z-10 text-left">
                 <h3 className="text-lg font-bold text-gray-900">
@@ -86,9 +110,15 @@ const ServicesPage: React.FC = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="w-full sm:w-1/2 py-2 pl-2 relative">
+          <motion.div
+            className="w-full sm:w-1/2 py-2 pl-2 relative"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
             <div className="flex flex-col bg-blue-100 p-6 rounded-lg shadow-md h-full relative overflow-hidden">
               <div className="sm:w-4/5 p-4 z-10 text-left">
                 <h3 className="text-lg font-bold text-gray-900">
@@ -110,7 +140,7 @@ const ServicesPage: React.FC = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 

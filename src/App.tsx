@@ -8,6 +8,7 @@ import ServicesPage from "./pages/servicesPage";
 import ServicesLayout from "./pages/servicesLayout";
 import AboutUs from "./pages/aboutUs";
 import ContactUs from "./pages/contact";
+import { Toaster } from "./components/ui/toaster";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <Toaster />
       </Router>
   );
 }

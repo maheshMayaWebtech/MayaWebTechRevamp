@@ -17,7 +17,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./index.css";
-import { components } from "@/constants/navConstant";
+import { components, componentsServices } from "@/constants/navConstant";
 import mainLogo from '../../../public/mayaWebTechLogoMain.png'
 
 export function Navbar() {
@@ -162,7 +162,7 @@ export function Navbar() {
                 href="/docs"
                 className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent hover:text-slate-500`}
               >
-                Blogs
+                MayaPe
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -222,7 +222,7 @@ export function Navbar() {
             </button>
             {activeSubmenu === "drawer-services" && (
               <ul className="submenu">
-                {components.map((component) => (
+                {componentsServices.map((component) => (
                   <li key={component.title} onClick={toggleDrawer}>
                     <Link to={component.href}>{component.title}</Link>
                   </li>
@@ -256,7 +256,7 @@ export function Navbar() {
           </li>
           <li>
             <Link onClick={toggleDrawer} to="/blogs">
-              Blogs
+              MayaPe
             </Link>
           </li>
           <li>

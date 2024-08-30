@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ContactDrawer } from "@/common/ContactDrawer";
 import ContactUsForm from "@/common/ContactForm";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const ContactUs = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -15,7 +16,13 @@ const ContactUs = () => {
         <section className="heroSectionContactUs w-full py-28 md:py-24 lg:py-16 pb-8 sm:px-8">
           <div className="container px-4 md:px-6 ">
             <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 lg:gap-12 items-center">
-              <div className="space-y-4 text-left">
+              <motion.div
+                className="space-y-4 text-left"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   We're Here to Help
                 </h2>
@@ -30,8 +37,12 @@ const ContactUs = () => {
                 >
                   Get in Touch
                 </Button>
-              </div>
-              <img
+              </motion.div>
+              <motion.img
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
                 src="/Contact us.svg"
                 width="550"
                 height="310"
@@ -46,12 +57,16 @@ const ContactUs = () => {
         <section className="w-full py-12 md:py-24 lg:py-32 px-2 sm:px-16 ">
           <div className="container px-4 md:px-6">
             <div className="flex sm:grid gap-6 flex-col-reverse lg:grid-cols-2 lg:gap-16 items-center">
-              <iframe
+              <motion.iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d169.0724326238418!2d77.31212023395004!3d28.585454016360714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x82bb1073c98eb55b%3A0x8ce0dbaa63119ed7!2sMaya%20Web%20Tech!5e1!3m2!1sen!2sin!4v1724740552341!5m2!1sen!2sin"
                 className="sm:mx-auto sm:aspect-[3/2] overflow-hidden rounded-xl object-cover object-center w-full h-[300px] sm:h-full"
                 loading="lazy"
+                initial={{ opacity: 0, scaleX: 0.9, scaleY: 0.9 }}
+                whileInView={{ opacity: 1, scaleX: 1, scaleY: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
               />
-              <div className="space-y-4 text-left ">
+              <motion.div className="space-y-4 text-left ">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   Visit Our Office
                 </h2>
@@ -67,7 +82,7 @@ const ContactUs = () => {
                 >
                   Open Google Map
                 </Link>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -76,7 +91,13 @@ const ContactUs = () => {
         <section className="supportSection247 w-full py-28 md:py-24 lg:py-16 pb-8 px-2 sm:px-16 ">
           <div className="container px-4 md:px-6 ">
             <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 lg:gap-12 items-center">
-              <div className="space-y-4 text-left">
+              <motion.div
+                className="space-y-4 text-left"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   24/7 Customer Support
                 </h2>
@@ -91,12 +112,16 @@ const ContactUs = () => {
                 >
                   Contact Support
                 </Button>
-              </div>
-              <img
+              </motion.div>
+              <motion.img
                 src="/contact24-7.png"
                 width="550"
                 height="310"
                 alt="Contact Us"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
                 className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full"
               />
             </div>
@@ -107,7 +132,13 @@ const ContactUs = () => {
         <section className="w-full py-28 md:py-24 lg:py-16 pb-8 px-2 sm:px-16 bg-gradient-to-t from-gray-100">
           <div className="container px-4 md:px-6 ">
             <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 lg:gap-12 items-center">
-              <div className="space-y-4 text-left">
+              <motion.div
+                className="space-y-4 text-left"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   Join Our Team
                 </h2>
@@ -122,8 +153,12 @@ const ContactUs = () => {
                 >
                   Contact
                 </Button>
-              </div>
-              <img
+              </motion.div>
+              <motion.img
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
                 src="/join-team.png"
                 width="550"
                 height="310"

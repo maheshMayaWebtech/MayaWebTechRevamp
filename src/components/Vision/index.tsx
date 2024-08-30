@@ -1,4 +1,5 @@
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
+import { motion } from "framer-motion";
 const cardData = [
   {
     title: "Mission",
@@ -122,12 +123,19 @@ const Vision = () => {
   return (
     <div className="flex justify-evenly gap-8 flex-wrap sm:flex-nowrap w-full mt-8">
       {cardData.map((item, index) => (
-        <ThreeDCard
-          title={item.title}
-          description={item.description}
-          logo={item.logo}
-          key={index}
-        />
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index* 0.2 }}
+          viewport={{ once: true }}
+        >
+          <ThreeDCard
+            title={item.title}
+            description={item.description}
+            logo={item.logo}
+            key={index}
+          />
+        </motion.div>
       ))}
     </div>
   );

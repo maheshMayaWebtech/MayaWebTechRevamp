@@ -1,5 +1,6 @@
 import { FaBuilding, FaLaptop, FaBullhorn, FaLeaf } from "react-icons/fa";
 import { WobbleCard } from "../../components/ui/wobble-card";
+import { motion } from "framer-motion";
 import "./index.css";
 
 const AboutUs = () => {
@@ -44,7 +45,13 @@ const AboutUs = () => {
           width={1100}
           alt="Decorative Blob"
         />
-        <div className="relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left w-full sm:w-6/12">
+        <motion.div
+          className="relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left w-full sm:w-6/12"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <h1 className="text-3xl lg:text-5xl text-red-800 mb-4 sm:mb-8">
             We’re Your Digital Technological Partner
           </h1>
@@ -61,7 +68,7 @@ const AboutUs = () => {
               Contact Us
             </button>
           </div>
-        </div>
+        </motion.div>
 
         <div className="relative z-10 mt-8 lg:mt-0">
           <img
@@ -74,17 +81,35 @@ const AboutUs = () => {
 
       <div className="allItemsCircle relative flex flex-col items-center justify-center bg-cover bg-center">
         <div className="text-center max-w-2xl mx-auto px-4">
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4 capitalize">
+          <motion.h1
+            className="text-2xl md:text-4xl font-bold text-gray-800 mb-4 capitalize"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             A workplace focused on experience and enabling teams to work
             together better
-          </h1>
-          <p className="text-gray-600 mb-6">
+          </motion.h1>
+          <motion.p
+            className="text-gray-600 mb-6"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             How we work is changing, and businesses must find new and better
             ways to communicate.
-          </p>
-          <button className="bg-red-700 text-white py-2 px-6 rounded-lg hover:bg-red-800 transition">
+          </motion.p>
+          <motion.button
+            className="bg-red-700 text-white py-2 px-6 rounded-lg hover:bg-red-800 transition"
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             Get Started
-          </button>
+          </motion.button>
         </div>
       </div>
 
@@ -98,7 +123,11 @@ const AboutUs = () => {
         <div className="container mx-auto py-10 px-4 sm:px-28">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 * index }}
+                viewport={{ once: true }}
                 key={index}
                 className="whyChooseUsCardItems bg-white p-6 rounded-lg shadow-md text-center border  hover:translate-y-[-10px] hover:shadow-lg transition-all duration-200 cursor-pointer"
               >
@@ -111,7 +140,7 @@ const AboutUs = () => {
                   {service.title}
                 </h3>
                 <p className="text-gray-500 mt-2">{service.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

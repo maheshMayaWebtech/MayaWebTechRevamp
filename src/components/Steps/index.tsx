@@ -46,36 +46,55 @@ const Steps = () => {
           </h1>
         </motion.div>
 
-        <motion.div
-          ref={cardsRef}
-          initial={{ opacity: 0, y: 80 }}
-          animate={cardsControls}
-        >
+        <motion.div>
           <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center place-items-center mx-auto">
-            <EvervaultCardDemo
-              title={"Design"}
-              insideContent={"We Design"}
-              description={
-                "Ready to launch your next big idea? We've got you covered. With websites that grow as fast as your ambitions, impressing investors is just the beginning."
-              }
-              tagText={"Step 1"}
-            />
-            <EvervaultCardDemo
-              title={"Development"}
-              insideContent={"We Develop"}
-              description={
-                "Ready to launch your next big idea? We've got you covered. With websites that grow as fast as your ambitions, impressing investors is just the beginning."
-              }
-              tagText={"Step 2"}
-            />
-            <EvervaultCardDemo
-              title={"Marketing"}
-              insideContent={"We Do Marketing"}
-              description={
-                "Ready to launch your next big idea? We've got you covered. With websites that grow as fast as your ambitions, impressing investors is just the beginning."
-              }
-              tagText={"Step 3"}
-            />
+            <motion.div
+              initial={{ opacity: 0, y: -25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <EvervaultCardDemo
+                title={"Design"}
+                insideContent={"We Design"}
+                description={
+                  "Ready to launch your next big idea? We've got you covered. With websites that grow as fast as your ambitions, impressing investors is just the beginning."
+                }
+                tagText={"Step 1"}
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: -25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <EvervaultCardDemo
+                title={"Development"}
+                insideContent={"We Develop"}
+                description={
+                  "Ready to launch your next big idea? We've got you covered. With websites that grow as fast as your ambitions, impressing investors is just the beginning."
+                }
+                tagText={"Step 2"}
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: -25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
+              viewport={{ once: true }}
+            >
+              {" "}
+              <EvervaultCardDemo
+                title={"Marketing"}
+                insideContent={"We Do Marketing"}
+                description={
+                  "Ready to launch your next big idea? We've got you covered. With websites that grow as fast as your ambitions, impressing investors is just the beginning."
+                }
+                tagText={"Step 3"}
+              />
+            </motion.div>
           </div>
         </motion.div>
       </div>

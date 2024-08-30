@@ -4,23 +4,52 @@ import "./index.css";
 import { industryData } from "@/constants/industry";
 import LetsTalkFooter from "@/components/LetsTalkFooter";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { motion } from "framer-motion";
 
 const IndustryLayout = () => {
   const { industry } = useParams();
-  const industryContent = industryData[industry as keyof typeof industryData] || industryData["healthcare"];
+  const industryContent =
+    industryData[industry as keyof typeof industryData] ||
+    industryData["healthcare"];
 
   return (
     <div className="industrySec min-h-screen">
       <div className="mx-auto">
         <div className="relative mb-12 text-center h-[450px] sm:h-[500px] pt-40 industryMain">
-          <h1 className="absolute show-title text-6xl sm:text-[180px] z-[-9]">{industryContent.title}</h1>
-          <h1 className="text-5xl sm:text-7xl font-bold text-gray-900 mb-4 ">
+          <motion.h1
+            className="absolute show-title text-6xl sm:text-[180px] z-[-9]"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             {industryContent.title}
-          </h1>
-          <h2 className="text-xl font-semibold text-gray-700">
+          </motion.h1>
+          <motion.h1
+            className="text-5xl sm:text-7xl font-bold text-gray-900 mb-4 "
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            {industryContent.title}
+          </motion.h1>
+          <motion.h2
+            className="text-xl font-semibold text-gray-700"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
             {industryContent.heading}
-          </h2>
-          <div className="flex justify-center gap-16 mt-8">
+          </motion.h2>
+          <motion.div
+            className="flex justify-center gap-16 mt-8"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
@@ -35,7 +64,7 @@ const IndustryLayout = () => {
             >
               <span>Back to Home</span>
             </HoverBorderGradient>
-          </div>
+          </motion.div>
         </div>
 
         <div className="space-y-4 text-center mb-40 px-4 sm:px-28">
@@ -52,14 +81,20 @@ const IndustryLayout = () => {
         <div className="text-xl sm:text-5xl mb-12">Key Features</div>
         <div className="allKeyFeaturesIndustries space-y-20 sm:space-y-48 px-4 sm:px-28">
           {industryContent.offerings.map((offering: any, index: number) => (
-            <div
+            <motion.div
               key={index}
               className={`flex ${
                 index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
               } items-center gap-8 flex-col sm:flex-row `}
+              initial={{ opacity: 0, x: index%2 === 0 ? -100 : 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
             >
               <div className="flex-1">
-                <div className="mx-4 px-4 py-2 rounded-sm font-bold text-white bg-red-700 sm:w-3/12 ">Feature {index+1}</div>
+                <div className="mx-4 px-4 py-2 rounded-sm font-bold text-white bg-red-700 sm:w-3/12 ">
+                  Feature {index + 1}
+                </div>
                 <div className="p-4">
                   <h3 className="text-3xl font-semibold text-gray-900 mb-2 text-left">
                     {offering.title}
@@ -73,14 +108,20 @@ const IndustryLayout = () => {
                 </div>
               </div>
 
-              <div className="flex-1" style={{display: 'flex', justifyContent: `${(index+1)%2 === 0 ? 'left': 'right'}`}}>
+              <div
+                className="flex-1"
+                style={{
+                  display: "flex",
+                  justifyContent: `${(index + 1) % 2 === 0 ? "left" : "right"}`,
+                }}
+              >
                 <img
                   src={offering.image}
                   alt={offering.title}
                   className="w-96 h-auto rounded-lg"
                 />
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         <div className="whyChooseIndustry ">
@@ -95,7 +136,11 @@ const IndustryLayout = () => {
           <div className="py-20 lg:py-20 px-4 sm:px-28">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-2 max-w-7xl mx-auto">
               {grid.map((feature, ind) => (
-                <div
+                <motion.div
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: ind*0.2 }}
+                viewport={{ once: true }}
                   key={ind}
                   className="relative bg-gradient-to-r dark:from-neutral-900 from-neutral-50 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden"
                 >
@@ -106,7 +151,7 @@ const IndustryLayout = () => {
                   <p className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-20">
                     {feature.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

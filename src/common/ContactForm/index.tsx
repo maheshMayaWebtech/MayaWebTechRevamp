@@ -2,9 +2,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
+import { collection, addDoc } from "firebase/firestore";
+import {MayaWebTechDB} from '../../Firebase'
+import { Loader2 } from "lucide-react";
 
 const ContactUsForm = ({type}: {type: string}) => {
+  const {toast} = useToast()
+  const [isLoading, setIsLoading] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -51,17 +57,30 @@ const ContactUsForm = ({type}: {type: string}) => {
     }));
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
+    setIsLoading(true)
     if (validateForm()) {
-      console.log("Form data submitted:", formData);
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
+      try {
+        await addDoc(collection(MayaWebTechDB, "MayaWebTechDB"), {
+          formData,
+        });
+        toast({
+          variant: 'green',
+          title: "We got your message!",
+          description: "Our team will contact you soon.",
+        })
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
       setErrors({});
     }
+    setIsLoading(false)
   };
   return (
     <div>
@@ -116,10 +135,12 @@ const ContactUsForm = ({type}: {type: string}) => {
                 )}
               </div>
               <Button
+                disabled={isLoading}
                 type="submit"
                 className="w-full bg-red-700 hover:bg-red-700/90"
               >
-                Submit
+                {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                {isLoading ? "Please Wait" : "Submit"}
               </Button>
             </form>
           </div>

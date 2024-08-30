@@ -27,7 +27,7 @@ const services: Service[] = [
       "Conveniently promote transparent materials and stand-alone strategic theme areas.",
     number: "01",
     icon: <FaCode />,
-    redirect: "/services/mobile-development"
+    redirect: "/services/mobile-development",
   },
   {
     title: "Software Development",
@@ -35,8 +35,7 @@ const services: Service[] = [
       "Conveniently promote transparent materials and stand-alone strategic theme areas.",
     number: "02",
     icon: <FaPaintBrush />,
-    redirect: "/services/software-development"
-
+    redirect: "/services/software-development",
   },
   {
     title: "Web Services",
@@ -44,7 +43,7 @@ const services: Service[] = [
       "Conveniently promote transparent materials and stand-alone strategic theme areas.",
     number: "03",
     icon: <FaBullhorn />,
-    redirect: "/services/web-services"
+    redirect: "/services/web-services",
   },
   {
     title: "Digital Marketing",
@@ -52,7 +51,7 @@ const services: Service[] = [
       "Conveniently promote transparent materials and stand-alone strategic theme areas.",
     number: "04",
     icon: <FaChartLine />,
-    redirect: "/services/digital-marketing"
+    redirect: "/services/digital-marketing",
   },
   {
     title: "Software Testing",
@@ -60,8 +59,7 @@ const services: Service[] = [
       "Conveniently promote transparent materials and stand-alone strategic theme areas.",
     number: "05",
     icon: <FaCogs />,
-    redirect: "/services/software-testing"
-
+    redirect: "/services/software-testing",
   },
   {
     title: "Web Hosting",
@@ -69,8 +67,7 @@ const services: Service[] = [
       "Conveniently promote transparent materials and stand-alone strategic theme areas.",
     number: "06",
     icon: <FaRobot />,
-    redirect: "/services/web-hosting"
-
+    redirect: "/services/web-hosting",
   },
 ];
 
@@ -84,6 +81,10 @@ const ServiceCards: React.FC = () => {
           key={index}
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.2 }}
+          viewport={{ once: true }}
           className={`relative group rounded-lg overflow-hidden shadow-lg p-4 sm:p-8 sm:px-12 service-card ${
             hoveredIndex === index ? "service-card-hovered" : ""
           }`}
@@ -105,14 +106,20 @@ const ServiceCards: React.FC = () => {
             <div className="flex justify-between flex-col gap-8 items-left relative">
               <div
                 className={`text-4xl py-4 rounded-full p-4 flex items-center justify-center text-4xl w-16 h-16 service-icon ${
-                  hoveredIndex === index ? "bg-white text-red-800" : "bg-red-800 text-white"
+                  hoveredIndex === index
+                    ? "bg-white text-red-800"
+                    : "bg-red-800 text-white"
                 }`}
               >
                 {service.icon}
               </div>
               <div className="text-white flex flex-col gap-4 text-left service-text ">
-                <h3 className="text-lg sm:text-2xl font-bold text-black service-text">{service.title}</h3>
-                <p className="mt-2 text-sm sm:text-lg text-gray-600 service-text">{service.description}</p>
+                <h3 className="text-lg sm:text-2xl font-bold text-black service-text">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-sm sm:text-lg text-gray-600 service-text">
+                  {service.description}
+                </p>
               </div>
               <div
                 style={{ position: "absolute", right: "0px", top: "-70px" }}
@@ -122,13 +129,13 @@ const ServiceCards: React.FC = () => {
               </div>
             </div>
             <Link to={service.redirect} target="_blank">
-            <motion.button
-              className="mt-4 px-4 py-2 text-xs sm:text-sm bg-white text-red-800 font-bold rounded shadow-lg flex items-center gap-2"
-              whileHover={{ scale: 1.1 }}
+              <motion.button
+                className="mt-4 px-4 py-2 text-xs sm:text-sm bg-white text-red-800 font-bold rounded shadow-lg flex items-center gap-2"
+                whileHover={{ scale: 1.1 }}
               >
-              READ MORE <FaArrowRightLong />
-            </motion.button>
-              </Link>
+                READ MORE <FaArrowRightLong />
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
       ))}

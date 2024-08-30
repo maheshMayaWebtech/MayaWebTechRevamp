@@ -79,7 +79,7 @@ const ReviewHome = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="ratingRightContent flex flex-col gap-8 w-auto text-left justify-center px-2 sm:pl-12"
       >
-        <div >
+        <div className="space-y-8" >
           <h1 className="text-3xl sm:text-4xl font-semibold">
             Culture <span className="font-bold text-red-700">crafted</span> and{" "}
             <span className="font-bold text-red-700"> loved</span> by engineers
