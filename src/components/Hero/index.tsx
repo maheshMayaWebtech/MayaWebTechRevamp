@@ -4,8 +4,11 @@ import { FlipWords } from "../ui/flip-words";
 import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
 import "./index.css";
 import { Badge } from "../ui/badge";
+import { ContactDrawer } from "@/common/ContactDrawer";
+import { useState } from "react";
 
 export function Hero() {
+  const [openDrawer, setOpenDrawer] = useState(false);
   const words = ["Websites", "Apps", "SEO", "Marketing"];
   const wordsTypeWriter = [
     {
@@ -32,7 +35,9 @@ export function Hero() {
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
         <div className="leadingTechHero">
-          <Badge className="px-8 py-2" variant="secondary">Leading Tech</Badge>
+          <Badge className="px-8 py-2" variant="secondary">
+            Leading Tech
+          </Badge>
         </div>
         <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
           Your one-stop solution
@@ -51,11 +56,15 @@ export function Hero() {
           <button className="w-40 h-10 rounded-xl bg-red-700 border dark:border-white border-transparent text-white text-sm">
             Get Started
           </button>
-          <button className="w-40 h-10 rounded-xl bg-white text-red-700 border border-red-700  text-sm">
+          <button
+            onClick={() => setOpenDrawer(true)}
+            className="w-40 h-10 rounded-xl bg-white text-red-700 border border-red-700  text-sm"
+          >
             Contact Us
           </button>
         </div>
       </motion.div>
+      <ContactDrawer isOpen={openDrawer} handleChange={setOpenDrawer} />
     </AuroraBackground>
   );
 }

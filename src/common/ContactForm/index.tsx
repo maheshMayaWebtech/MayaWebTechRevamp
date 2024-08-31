@@ -84,7 +84,7 @@ const ContactUsForm = ({type}: {type: string}) => {
   };
   return (
     <div>
-      <section className={`contactUsFormPage w-full py-8 ${type === 'contactPage' ? 'py-32' : 'py-8'} `}>
+      <section className={`contactUsFormPage w-full ${type === 'contactPage' ? 'py-32' : 'py-8'} `}>
         <div className="container px-4 md:px-6">
           <div className="max-w-2xl mx-auto space-y-2 sm:space-y-5">
             <h2 className="text-xl font-bold tracking-tighter sm:text-3xl md:text-5xl sm:text-center">

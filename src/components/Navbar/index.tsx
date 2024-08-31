@@ -18,12 +18,14 @@ import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./index.css";
 import { components, componentsServices } from "@/constants/navConstant";
-import mainLogo from '../../../public/mayaWebTechLogoMain.png'
+import mainLogo from "../../../public/mayaWebTechLogoMain.png";
+import { ContactDrawer } from "@/common/ContactDrawer";
 
 export function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [openDrawer, setOpenDrawer] = useState(false);
 
   const toggleSubmenu = (menu: string) => {
     setActiveSubmenu(activeSubmenu === menu ? null : menu);
@@ -54,11 +56,7 @@ export function Navbar() {
       } sticky top-0 z-50 w-full border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60`}
     >
       <div className="leftNavLogo">
-        <img
-          src={mainLogo}
-          alt="logo"
-          height={45}
-        />
+        <img src={mainLogo} alt="logo" height={45} />
       </div>
       <div className="navItemsMid">
         <NavigationMenu>
@@ -90,7 +88,10 @@ export function Navbar() {
                           tailored to your unique needs.
                         </p>
                         <button className="bg-red-700 py-2 mt-4 rounded-lg shadow-lg text-white hover:bg-red-800 transition-all ">
-                          <Link to={"/services"} className="flex items-center justify-center text-center gap-2">
+                          <Link
+                            to={"/services"}
+                            className="flex items-center justify-center text-center gap-2"
+                          >
                             Show All Services{" "}
                             <FaArrowRightLong className="text-white " />
                           </Link>
@@ -100,11 +101,17 @@ export function Navbar() {
                   </li>
                   <div className="flex text-left">
                     <div>
-                      <ListItem href="/services/mobile-development" title="Mobile Development">
+                      <ListItem
+                        href="/services/mobile-development"
+                        title="Mobile Development"
+                      >
                         Re-usable components built using Radix UI and Tailwind
                         CSS.
                       </ListItem>
-                      <ListItem href="/services/web-services" title="Web Services">
+                      <ListItem
+                        href="/services/web-services"
+                        title="Web Services"
+                      >
                         How to install dependencies and structure your app.
                       </ListItem>
                       <ListItem
@@ -115,11 +122,17 @@ export function Navbar() {
                       </ListItem>
                     </div>
                     <div>
-                      <ListItem href="/services/software-development" title="Software Development">
+                      <ListItem
+                        href="/services/software-development"
+                        title="Software Development"
+                      >
                         Re-usable components built using Radix UI and Tailwind
                         CSS.
                       </ListItem>
-                      <ListItem href="/services/digital-marketing" title="Digital Marketing">
+                      <ListItem
+                        href="/services/digital-marketing"
+                        title="Digital Marketing"
+                      >
                         How to install dependencies and structure your app.
                       </ListItem>
                       <ListItem
@@ -194,12 +207,7 @@ export function Navbar() {
               justifyContent: "space-between",
             }}
           >
-            <img
-              src={mainLogo}
-              alt="logo"
-              width={100}
-              className="mb-4"
-            />
+            <img src={mainLogo} alt="logo" width={100} className="mb-4" />
           </li>
           <li>
             <Link onClick={toggleDrawer} to="/">
@@ -269,16 +277,13 @@ export function Navbar() {
               Contact
             </Link>
           </li>
-          <li>
-            <Link to="/contact-us">Contact</Link>
-          </li>
-          <li>
-            <Link to="/contact-us">Contact</Link>
-          </li>
         </ul>
       </div>
       <div className="rightButtonNav">
-        <button className=" rightMenuButton flex items-center gap-1 shadow-[0_4px_14px_0_rgb(0,0,0,10%)] hover:shadow-[0_6px_20px_rgba(93,93,93,23%)] px-6 py-1 bg-[#fff] text-[#696969] rounded-md font-light transition duration-200 ease-linear">
+        <button
+          onClick={() => setOpenDrawer(true)}
+          className=" rightMenuButton flex items-center gap-1 shadow-[0_4px_14px_0_rgb(0,0,0,10%)] hover:shadow-[0_6px_20px_rgba(93,93,93,23%)] px-6 py-1 bg-[#fff] text-[#696969] rounded-md font-light transition duration-200 ease-linear"
+        >
           Book Demo
           <MdArrowOutward />
         </button>
@@ -296,6 +301,7 @@ export function Navbar() {
           />
         )}
       </div>
+      <ContactDrawer isOpen={openDrawer} handleChange={setOpenDrawer} />
     </div>
   );
 }
