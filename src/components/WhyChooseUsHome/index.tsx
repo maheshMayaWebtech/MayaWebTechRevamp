@@ -1,14 +1,14 @@
 import "./index.css";
 import { cn } from "@/lib/utils";
 import {
-  IconAdjustmentsBolt,
-  IconCloud,
-  IconCurrencyDollar,
-  IconEaseInOut,
-  IconHeart,
-  IconHelp,
-  IconRouteAltLeft,
-  IconTerminal2,
+  IconAward,
+  IconBulb,
+  IconChartLine,
+  IconDiamond,
+  IconHeadset,
+  IconSettings,
+  IconShieldCheck,
+  IconThumbUp,
 } from "@tabler/icons-react";
 import { useAnimation, motion } from "framer-motion";
 import { useEffect } from "react";
@@ -17,49 +17,46 @@ import { useInView } from "react-intersection-observer";
 const WhyChooseUsHome = () => {
   const features = [
     {
-      title: "Built for developers",
+      title: "Innovation",
+      description: "Delivering innovative solutions for your digital needs.",
+      icon: <IconBulb />,
+    },
+    {
+      title: "Customer Satisfaction",
+      description: "Ensuring satisfaction by meeting customer expectations.",
+      icon: <IconThumbUp />,
+    },
+    {
+      title: "Experience",
+      description: "Years of experience driving growth and quality service.",
+      icon: <IconAward />,
+    },
+    {
+      title: "Results",
+      description: "Focused on achieving measurable results for your business.",
+      icon: <IconChartLine />,
+    },
+    {
+      title: "Quality",
+      description: "Commitment to high-quality standards in every project.",
+      icon: <IconShieldCheck />,
+    },
+    {
+      title: "End-to-End Services",
       description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
-      icon: <IconTerminal2 />,
+        "Providing comprehensive web and digital marketing services.",
+      icon: <IconSettings />,
     },
     {
-      title: "Ease of use",
+      title: "Dedicated Support",
+      description: "Offering 24/7 support to ensure your success.",
+      icon: <IconHeadset />,
+    },
+    {
+      title: "Crafting Excellence",
       description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
-      icon: <IconEaseInOut />,
-    },
-    {
-      title: "Pricing like no other",
-      description:
-        "Our prices are best in the market. No cap, no lock, no credit card required.",
-      icon: <IconCurrencyDollar />,
-    },
-    {
-      title: "100% Uptime guarantee",
-      description: "We just cannot be taken down by anyone.",
-      icon: <IconCloud />,
-    },
-    {
-      title: "Multi-tenant Architecture",
-      description: "You can simply share passwords instead of buying new seats.",
-      icon: <IconRouteAltLeft />,
-    },
-    {
-      title: "24/7 Customer Support",
-      description:
-        "We are available a 100% of the time. At least our AI Agents are.",
-      icon: <IconHelp />,
-    },
-    {
-      title: "Money back guarantee",
-      description:
-        "If you do not like EveryAI, we will convince you to like us.",
-      icon: <IconAdjustmentsBolt />,
-    },
-    {
-      title: "And everything else",
-      description: "I just ran out of copy ideas. Accept my sincere apologies.",
-      icon: <IconHeart />,
+        "Creating digital excellence for your brand’s online success.",
+      icon: <IconDiamond />,
     },
   ];
 

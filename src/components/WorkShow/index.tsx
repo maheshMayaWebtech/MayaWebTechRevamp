@@ -9,7 +9,7 @@ export function WorkShow() {
       content: (
         <div className="w-full h-full p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900 rounded-2xl relative overflow-hidden">
           <p>Mobile App</p>
-          <DummyContent url="https://res.cloudinary.com/dqcr5yn0b/image/upload/v1723529220/HP_Mwt_2_gekoan.png" />
+          <DummyContent url="/mobDemo.png" />
         </div>
       ),
     },
@@ -19,7 +19,7 @@ export function WorkShow() {
       content: (
         <div className="w-full h-full p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900 rounded-2xl relative overflow-hidden">
           <p>Websites</p>
-          <DummyContent url="https://res.cloudinary.com/dqcr5yn0b/image/upload/v1723532184/HP_Mwt_2_1_az0j9t.png" />
+          <DummyContent url="/websiteDemo.png" />
         </div>
       ),
     },
@@ -29,7 +29,7 @@ export function WorkShow() {
       content: (
         <div className="w-full h-full p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900 rounded-2xl relative overflow-hidden">
           <p>iOS</p>
-          <DummyContent />
+          <DummyContent url="/iosDemo.png" />
         </div>
       ),
     },
@@ -39,7 +39,7 @@ export function WorkShow() {
       content: (
         <div className="w-full h-full p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900 rounded-2xl relative overflow-hidden">
           <p>Android</p>
-          <DummyContent />
+          <DummyContent url="mobileDemo.png" />
         </div>
       ),
     },
@@ -79,7 +79,7 @@ const DummyContent = ({ url }: { url?: string }) => {
       <img
         src={url}
         alt="dummy image"
-        //   className="absolute inset-0 w-full h-full object-cover rounded-xl"
+          className="absolute inset-0 sm:h-full h-60 object-cover rounded-xl mx-auto p-8"
       />
     </div>
   );

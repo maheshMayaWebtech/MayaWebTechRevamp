@@ -230,8 +230,8 @@ export function Navbar() {
             </button>
             {activeSubmenu === "drawer-services" && (
               <ul className="submenu">
-                {componentsServices.map((component) => (
-                  <li key={component.title} onClick={toggleDrawer}>
+                {componentsServices.map((component, index) => (
+                  <li key={index} onClick={toggleDrawer}>
                     <Link to={component.href}>{component.title}</Link>
                   </li>
                 ))}
@@ -254,8 +254,8 @@ export function Navbar() {
             </button>
             {activeSubmenu === "drawer-industries" && (
               <ul className="submenu">
-                {components.map((component) => (
-                  <li key={component.title} onClick={toggleDrawer}>
+                {components.map((component, id) => (
+                  <li key={id} onClick={toggleDrawer}>
                     <Link to={component.href}>{component.title}</Link>
                   </li>
                 ))}

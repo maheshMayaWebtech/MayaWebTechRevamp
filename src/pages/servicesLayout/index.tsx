@@ -75,24 +75,24 @@ const ServicesLayout = () => {
             <motion.div
               key={index}
               className={`serviceKeyFeatures gap-10 text-left items-center justify-between`}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <motion.div className="flex flex-col gap-3">
+              <motion.div className="flex flex-col gap-3 w-7/12">
                 <h3 className="text-xl sm:text-2xl font-bold text-red-700 sm:mb-2">
                   {feature.title}
                 </h3>
                 <h3 className="text-4xl font-semibold sm:font-extrabold mb-2">
                   {feature.subtitle}
                 </h3>
-                <p className="text-gray-600 sm:text-xl">
+                <p className="text-gray-600 sm:text-xl w-9/12">
                   {feature.description}
                 </p>
               </motion.div>
-              <div>
-                <img className="" src={serviceImage} alt="serviceImage" />
+              <div className="w-5/12 min-h-96 flex items-center">
+                <img className="" src={feature?.url || serviceImage} alt="serviceImage" />
               </div>
             </motion.div>
           ))}
@@ -171,10 +171,10 @@ const ServicesLayout = () => {
       >
         <div className="sm:w-5/12 flex flex-col gap-3 sm:gap-6">
           <h3 className="text-xl sm:text-2xl font-bold text-red-700 sm:mb-2">
-            Don’t Overpay for Great Web Design
+            Don’t Overpay for {serviceContent.title}
           </h3>
           <h3 className="text-5xl font-semibold sm:font-extrabold mb-2">
-            Web design is included in all our plans
+            {serviceContent.title} is included in all our plans
           </h3>
           <p className="text-gray-600 sm:text-xl">
             All plans include unlimited requests, unlimited revisions, and
@@ -185,7 +185,7 @@ const ServicesLayout = () => {
             style={{ border: "1px solid" }}
             className="bg-white text-red-700 border-red-700 font-bold px-6 py-3 hover:bg-red-700 hover:text-white rounded-lg transition duration-300"
           >
-            Pick Your Plan
+            Contact Us Now
           </button>
         </div>
         <motion.div

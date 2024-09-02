@@ -1,4 +1,3 @@
-import reviewImage from "../../../public/reviews.png";
 import greatPlace from "../../../public/greatPlace.png";
 import glassdoor from "../../../public/glassdoor.png";
 import "./index.css";
@@ -8,9 +7,32 @@ import { motion } from "framer-motion";
 
 const ReviewHome = () => {
   const reviews = [
-    "I feel a sense of pride working at Simform.",
-    "Simform is a great place to work with a supportive team.",
-    "The work culture at Simform encourages growth and learning.",
+    {
+      title: "I feel a sense of pride working at Maya Web Tech.",
+      position: "DevOps",
+    },
+    {
+      title: "Maya Web Tech is a great place to work with a supportive team.",
+      position: "DevOps",
+    },
+    {
+      title: "The work culture at Maya Web Tech encourages growth and learning.",
+      position: "DevOps",
+    },
+  ];
+  const reviewsGlass = [
+    {
+      title: "I feel a sense of pride working at Maya Web Tech.",
+      position: "DevOps",
+    },
+    {
+      title: "Maya Web Tech is a great place to work with a supportive team.",
+      position: "DevOps",
+    },
+    {
+      title: "The work culture at Maya Web Tech encourages growth and learning.",
+      position: "DevOps",
+    },
   ];
 
   return (
@@ -22,13 +44,13 @@ const ReviewHome = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="relative"
       >
-        <div >
+        <div>
           <img
-            src={reviewImage}
+            src={"/allTeam.png"}
             alt="Review Image"
             className="reviewImageSection"
           />
-          <div className="reviewImageReviews absolute text-left top-8 right-0 sm:right-[-50px] w-[70%] text-sm bg-[#ffffffda] shadow-lg flex flex-col gap-2 px-8 py-4 rounded-md pr-4">
+          <div className="reviewImageReviews absolute text-left top-20 right-0 sm:right-[-30px] w-[70%] text-sm bg-[#ffffff75] backdrop-blur-md shadow-lg flex flex-col gap-2 px-8 py-4 rounded-md pr-4">
             <div className="absolute top-[-10px] text-xs font-semibold left-2 sm:left-[-40px] w-16 p-1">
               <img src={greatPlace} alt="greatplace" className="rounded-md" />
             </div>
@@ -36,11 +58,11 @@ const ReviewHome = () => {
               Great Place to Work reviews
             </div>
             {reviews.map((review, index) => (
-              <div key={index} className="text-xs italic text-gray-500">
-                {review}
+              <div key={index} className="text-xs italic text-black">
+                {review.title}
                 <br />
                 <span className="flex gap-2 not-italic font-semibold mt-1">
-                  DevOps Engineer
+                 {review.position}
                   <span className="flex gap-[1.5px]">
                     {[...Array(5).keys()].map((item) => (
                       <FaStar key={item} className="text-yellow-500" />
@@ -50,17 +72,17 @@ const ReviewHome = () => {
               </div>
             ))}
           </div>
-          <div className="reviewImageReviews absolute text-left bottom-[-30px] left-0 w-[70%] text-sm bg-[#ffffffda] shadow-lg flex flex-col gap-2 px-8 py-4 rounded-md pr-4">
+          <div className="reviewImageReviews absolute text-left bottom-[-30px] left-0 w-[70%] text-sm bg-[#ffffff50] backdrop-blur-sm shadow-lg flex flex-col gap-2 px-8 py-4 rounded-md pr-4">
             <div className="absolute top-[-10px] text-xs font-semibold right-[-10px] sm:right-[-30px] w-16 p-1">
               <img src={glassdoor} alt="greatplace" className="rounded-md" />
             </div>
             <div className="text-lg font-semibold">Glassdoor Reviews</div>
-            {reviews.map((review, index) => (
+            {reviewsGlass.map((review, index) => (
               <div key={index} className="text-xs italic text-gray-500">
-                {review}
+                {review.title}
                 <br />
                 <span className="flex gap-2 not-italic font-semibold mt-1">
-                  DevOps Engineer
+                  {review.position}
                   <span className="flex gap-[1.5px]">
                     {[...Array(5).keys()].map((item) => (
                       <FaStar key={item} className="text-green-500" />
@@ -79,20 +101,22 @@ const ReviewHome = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="ratingRightContent flex flex-col gap-8 w-auto text-left justify-center px-2 sm:pl-12"
       >
-        <div className="space-y-8" >
+        <div className="space-y-8">
           <h1 className="text-3xl sm:text-4xl font-semibold">
-            Culture <span className="font-bold text-red-700">crafted</span> and{" "}
-            <span className="font-bold text-red-700"> loved</span> by engineers
+            Empowered by a{" "}
+            <span className="font-bold text-red-700">Culture </span> of{" "}
+            <span className="font-bold text-red-700"> Innovation</span>
           </h1>
           <p className="sm:text-base font-extralight">
-            The Simform culture is crafted to create a truly rewarding
-            experience for engineers,{" "}
-            <span className="font-medium">
-              {" "}
-              meaning your team will be made up of highly motivated people.{" "}
-            </span>{" "}
-            As a result our teams are tightly integrated with yours. And that is
-            shown by the love they shower back on us.
+            At <strong> Maya Web Tech</strong>, our culture is designed to
+            create an enriching and fulfilling experience for engineers. Our
+            teams are composed of
+            <strong> highly motivated individuals</strong> who integrate
+            seamlessly with yours,
+            <strong> working together to drive success</strong>. <br /> This
+            strong collaboration is evident in the dedication and passion our
+            engineers bring to every project, reflecting the deep connection
+            they feel with our clients and their goals.
           </p>
           <HoverBorderGradient
             containerClassName="rounded-full"

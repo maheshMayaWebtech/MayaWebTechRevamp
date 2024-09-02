@@ -24,7 +24,7 @@ const services: Service[] = [
   {
     title: "Mobile Development",
     description:
-      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
+      "Empower your business with cutting-edge mobile applications that provide seamless user experiences, optimized performance, and innovative features.",
     number: "01",
     icon: <FaCode />,
     redirect: "/services/mobile-development",
@@ -32,15 +32,15 @@ const services: Service[] = [
   {
     title: "Software Development",
     description:
-      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
+      "Delivering robust and scalable software solutions that drive efficiency, enhance productivity, and accelerate your digital transformation journey.",
     number: "02",
     icon: <FaPaintBrush />,
     redirect: "/services/software-development",
   },
   {
-    title: "Web Services",
+    title: "Web Development",
     description:
-      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
+      "Crafting responsive, engaging, and high-performing websites tailored to your business needs, ensuring a strong online presence.",
     number: "03",
     icon: <FaBullhorn />,
     redirect: "/services/web-services",
@@ -48,7 +48,7 @@ const services: Service[] = [
   {
     title: "Digital Marketing",
     description:
-      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
+      "Maximize your reach and engagement through data-driven digital marketing strategies that boost brand visibility and drive growth.",
     number: "04",
     icon: <FaChartLine />,
     redirect: "/services/digital-marketing",
@@ -56,7 +56,7 @@ const services: Service[] = [
   {
     title: "Software Testing",
     description:
-      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
+      "Ensuring your software is reliable, secure, and free of defects with comprehensive testing services that guarantee quality and performance.",
     number: "05",
     icon: <FaCogs />,
     redirect: "/services/software-testing",
@@ -64,7 +64,7 @@ const services: Service[] = [
   {
     title: "Web Hosting",
     description:
-      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
+      "Providing reliable and secure web hosting services that ensure your website is always online, fast, and accessible to your audience.",
     number: "06",
     icon: <FaRobot />,
     redirect: "/services/web-hosting",

@@ -58,7 +58,7 @@ const Steps = () => {
                 title={"Design"}
                 insideContent={"We Design"}
                 description={
-                  "Ready to launch your next big idea? We've got you covered. With websites that grow as fast as your ambitions, impressing investors is just the beginning."
+                  "Our team designs visually appealing, user-friendly websites tailored to your brand, ensuring an engaging and impactful online presence."
                 }
                 tagText={"Step 1"}
               />
@@ -74,7 +74,7 @@ const Steps = () => {
                 title={"Development"}
                 insideContent={"We Develop"}
                 description={
-                  "Ready to launch your next big idea? We've got you covered. With websites that grow as fast as your ambitions, impressing investors is just the beginning."
+                  "We develop high-performance, scalable websites with clean code, optimizing for speed and user experience across all devices."
                 }
                 tagText={"Step 2"}
               />
@@ -90,7 +90,7 @@ const Steps = () => {
                 title={"Marketing"}
                 insideContent={"We Do Marketing"}
                 description={
-                  "Ready to launch your next big idea? We've got you covered. With websites that grow as fast as your ambitions, impressing investors is just the beginning."
+                  "We implement strategic marketing campaigns that enhance your brand visibility, driving traffic and conversions to achieve your business goals."
                 }
                 tagText={"Step 3"}
               />

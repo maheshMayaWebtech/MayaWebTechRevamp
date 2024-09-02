@@ -86,7 +86,7 @@ const IndustryLayout = () => {
               className={`flex ${
                 index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
               } items-center gap-8 flex-col sm:flex-row `}
-              initial={{ opacity: 0, x: index%2 === 0 ? -100 : 100 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
@@ -100,9 +100,6 @@ const IndustryLayout = () => {
                     {offering.title}
                   </h3>
                   <p className="text-lg text-gray-600 text-left">
-                    {offering.description}
-                  </p>
-                  <p className="text-lg text-gray-600 text-left mt-4">
                     {offering.description}
                   </p>
                 </div>
@@ -134,13 +131,13 @@ const IndustryLayout = () => {
             address your unique needs.
           </div>
           <div className="py-20 lg:py-20 px-4 sm:px-28">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-2 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-4 max-w-7xl mx-auto">
               {grid.map((feature, ind) => (
                 <motion.div
-                initial={{ opacity: 0, y: -100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: ind*0.2 }}
-                viewport={{ once: true }}
+                  initial={{ opacity: 0, y: -100 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: ind * 0.2 }}
+                  viewport={{ once: true }}
                   key={ind}
                   className="relative bg-gradient-to-r dark:from-neutral-900 from-neutral-50 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden"
                 >
@@ -166,44 +163,44 @@ export default IndustryLayout;
 
 const grid = [
   {
-    title: "HIPAA and SOC2 Compliant",
+    title: "Innovation",
     description:
-      "Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.",
+      "We deliver cutting-edge solutions and integrate the latest trends in web design and digital marketing to keep your business ahead of the curve.",
   },
   {
-    title: "Automated Social Media Posting",
+    title: "Customer Satisfaction",
     description:
-      "Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.",
+      "Our commitment is to exceed client expectations by providing high-quality services and ensuring complete satisfaction with every project we undertake.",
   },
   {
-    title: "Advanced Analytics",
+    title: "Experience",
     description:
-      "Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.",
+      "With years of industry experience, our team effectively applies proven strategies to drive growth and deliver exceptional results for your business.",
   },
   {
-    title: "Content Calendar",
+    title: "Results-Driven",
     description:
-      "Plan and organize your social media content with an intuitive calendar view, ensuring you never miss a post.",
+      "We focus on data-driven approaches to achieve measurable and impactful results, helping your business thrive in a competitive digital landscape.",
   },
   {
-    title: "Audience Targeting",
+    title: "Quality",
     description:
-      "Reach the right audience with advanced targeting options, including demographics, interests, and behaviors.",
+      "We adhere to the highest quality standards in all our services, ensuring excellence and reliability in every aspect of web design and digital marketing.",
   },
   {
-    title: "Social Listening",
+    title: "Personalization",
     description:
-      "Monitor social media conversations and trends to stay informed about what your audience is saying and respond in real-time.",
+      "Our solutions are carefully tailored to fit the unique needs and goals of each client, providing a customized approach for optimal results and satisfaction.",
   },
   {
-    title: "Customizable Templates",
+    title: "Time Management",
     description:
-      "Create stunning social media posts with our customizable templates, designed to fit your brand's unique style and voice.",
+      "We prioritize effective time management to deliver projects on schedule, ensuring that all work is completed promptly without compromising quality or detail.",
   },
   {
-    title: "Collaboration Tools",
+    title: "Professionalism",
     description:
-      "Work seamlessly with your team using our collaboration tools, allowing you to assign tasks, share drafts, and provide feedback in real-time.",
+      "Our team demonstrates professionalism in every interaction, maintaining a high standard of service and ensuring smooth, efficient, and respectful client communications.",
   },
 ];
 

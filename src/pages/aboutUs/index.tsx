@@ -264,11 +264,11 @@ const AboutUs = () => {
           >
             <div className="max-w-xs">
               <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-                Excellence in Craftsmanship
+                Design Excellence
               </h2>
-              <p className="mt-4 text-left  text-base/6 text-neutral-200">
-                With over 100,000 mothly active bot users, Gippity AI is the
-                most popular AI platform for developers.
+              <p className="mt-4 text-left text-base/6 text-neutral-200">
+                We create visually stunning websites with a focus on
+                user-centric design and functionality.
               </p>
             </div>
             <img
@@ -280,22 +280,22 @@ const AboutUs = () => {
             />
           </WobbleCard>
           <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-            <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-              Innovation and Creativity
+            <h2 className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+              Technical Mastery
             </h2>
-            <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-              If someone yells “stop!”, goes limp, or taps out, the fight is
-              over.
+            <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
+              We build robust, scalable solutions using the latest technologies
+              and best practices.
             </p>
           </WobbleCard>
           <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
             <div className="max-w-sm">
-              <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-                Empowerment Through Technology
+              <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+                Strategic Insight
               </h2>
-              <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-                With over 100,000 mothly active bot users, Gippity AI is the
-                most popular AI platform for developers.
+              <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
+                We use data-driven strategies to enhance your digital presence
+                and achieve measurable results.
               </p>
             </div>
             <img
@@ -342,24 +342,15 @@ const AboutUs = () => {
                   {member.message}
                 </p>
                 <div className="mt-4 flex items-center justify-end gap-2">
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                  >
+                  <Button variant="ghost" size="icon">
                     <LinkedinIcon className="w-5 h-5 hover:text-sky-600" />
                     <span className="sr-only">LinkedIn</span>
                   </Button>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                  >
+                  <Button variant="ghost" size="icon">
                     <TwitterIcon className="w-5 h-5 hover:text-sky-400" />
                     <span className="sr-only">Twitter</span>
                   </Button>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                  >
+                  <Button variant="ghost" size="icon">
                     <MailIcon className="w-5 h-5 hover:text-rose-500" />
                     <span className="sr-only">Email</span>
                   </Button>

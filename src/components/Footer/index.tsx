@@ -14,7 +14,6 @@ const Footer = () => {
         { name: "Home", to: "/" },
         { name: "About", to: "/about-us" },
         { name: "Contact", to: "contact-us" },
-        { name: "FAQ", to: "#" },
       ],
     },
     {
