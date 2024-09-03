@@ -10,52 +10,52 @@ import "./index.css";
 const AboutUs = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
-  const teamMembers = [
-    {
-      src: "/placeholder-user.jpg",
-      name: "Jaggu Bhai",
-      shortName: "JD",
-      position: "CEO",
-      message:
-        "Jaggu is the visionary leader behind MayaWebTech. With over 15 years of industry experience, she is passionate about driving innovation and empowering businesses to reach new heights.",
-      linkedin: "https://www.linkedin.com/in/jaggu-bhai",
-      twitter: "https://twitter.com/jaggu-bhai",
-      email: "mailto:jaggu.bhai@example.com",
-    },
-    {
-      src: "/placeholder-user.jpg",
-      name: "Java Script",
-      shortName: "JS",
-      position: "CTO",
-      message:
-        "Java Script is the technical mastermind behind Acme Software. With a deep understanding of cutting-edge technologies, he leads our engineering team to deliver innovative",
-      linkedin: "https://www.linkedin.com/in/java-script",
-      twitter: "https://twitter.com/java-script",
-      email: "mailto:java.script@example.com",
-    },
-    {
-      src: "/placeholder-user.jpg",
-      name: "Ramu Bhai",
-      shortName: "RB",
-      position: "Product Manager",
-      message:
-        "Ramu Bhai is the driving force behind our product strategy. With her keen eye for user experience and market trends, she ensures that our solutions are tailored to meet the evolving needs",
-      linkedin: "https://www.linkedin.com/in/ramu-bhai",
-      twitter: "https://twitter.com/ramu-bhai",
-      email: "mailto:ramu.bhai@example.com",
-    },
-    {
-      src: "/placeholder-user.jpg",
-      name: "Pappu Bhai",
-      shortName: "PB",
-      position: "Lead Developer",
-      message:
-        "Pappu Bhai is the technical lead of our engineering team. With his exceptional problem-solving skills and deep expertise in software development, he ensures that our solutions are robust, scalable, and secure.",
-      linkedin: "https://www.linkedin.com/in/pappu-bhai",
-      twitter: "https://twitter.com/pappu-bhai",
-      email: "mailto:pappu.bhai@example.com",
-    },
-  ];
+  // const teamMembers = [
+  //   {
+  //     src: "/placeholder-user.jpg",
+  //     name: "Jaggu Bhai",
+  //     shortName: "JD",
+  //     position: "CEO",
+  //     message:
+  //       "Jaggu is the visionary leader behind MayaWebTech. With over 15 years of industry experience, she is passionate about driving innovation and empowering businesses to reach new heights.",
+  //     linkedin: "https://www.linkedin.com/in/jaggu-bhai",
+  //     twitter: "https://twitter.com/jaggu-bhai",
+  //     email: "mailto:jaggu.bhai@example.com",
+  //   },
+  //   {
+  //     src: "/placeholder-user.jpg",
+  //     name: "Java Script",
+  //     shortName: "JS",
+  //     position: "CTO",
+  //     message:
+  //       "Java Script is the technical mastermind behind Acme Software. With a deep understanding of cutting-edge technologies, he leads our engineering team to deliver innovative",
+  //     linkedin: "https://www.linkedin.com/in/java-script",
+  //     twitter: "https://twitter.com/java-script",
+  //     email: "mailto:java.script@example.com",
+  //   },
+  //   {
+  //     src: "/placeholder-user.jpg",
+  //     name: "Ramu Bhai",
+  //     shortName: "RB",
+  //     position: "Product Manager",
+  //     message:
+  //       "Ramu Bhai is the driving force behind our product strategy. With her keen eye for user experience and market trends, she ensures that our solutions are tailored to meet the evolving needs",
+  //     linkedin: "https://www.linkedin.com/in/ramu-bhai",
+  //     twitter: "https://twitter.com/ramu-bhai",
+  //     email: "mailto:ramu.bhai@example.com",
+  //   },
+  //   {
+  //     src: "/placeholder-user.jpg",
+  //     name: "Pappu Bhai",
+  //     shortName: "PB",
+  //     position: "Lead Developer",
+  //     message:
+  //       "Pappu Bhai is the technical lead of our engineering team. With his exceptional problem-solving skills and deep expertise in software development, he ensures that our solutions are robust, scalable, and secure.",
+  //     linkedin: "https://www.linkedin.com/in/pappu-bhai",
+  //     twitter: "https://twitter.com/pappu-bhai",
+  //     email: "mailto:pappu.bhai@example.com",
+  //   },
+  // ];
 
   const services = [
     {
