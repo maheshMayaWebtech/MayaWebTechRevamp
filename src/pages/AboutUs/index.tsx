@@ -1,13 +1,11 @@
-import { FaBuilding, FaLaptop, FaBullhorn, FaLeaf } from "react-icons/fa";
-import { WobbleCard } from "../../components/ui/wobble-card";
-import { motion } from "framer-motion";
-import "./index.css";
-import { useState } from "react";
 import { ContactDrawer } from "@/common/ContactDrawer";
 import { Button } from "@/components/ui/button";
-import { LinkedinIcon, MailIcon, TwitterIcon } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { FaBuilding, FaBullhorn, FaLaptop, FaLeaf } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { WobbleCard } from "../../components/ui/wobble-card";
+import "./index.css";
 
 const AboutUs = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
