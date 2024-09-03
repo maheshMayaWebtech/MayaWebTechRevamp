@@ -68,7 +68,7 @@ export function Navbar() {
                 href="/"
                 className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent hover:text-slate-500`}
               >
-                Home
+                Home T
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
