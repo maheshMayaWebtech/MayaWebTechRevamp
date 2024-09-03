@@ -49,7 +49,7 @@ const Footer = () => {
               className="mb-4"
             />
             <h4 className="py-4 text-gray-700 text-left w-64">
-              Maya Web Tech T-04, A-44, near sector-15 Metro Station, <br />{" "}
+              T-04, A-44, near sector-15 Metro Station, <br />{" "}
               Sector 2, Noida, Uttar Pradesh <br /> 201301
             </h4>
             <Link
@@ -89,19 +89,22 @@ const Footer = () => {
               <div className="flex pl-4 justify-start mt-2">
                 <Link
                   className="flex items-center text-black hover:text-[#106aff] mr-6 no-underline transition-all transition-400 hover:translate-y-[-4px]"
-                  to="#"
-                >
+                  to="https://www.facebook.com/mayawebtech2"
+                  target="_blank"
+                  >
                   <FaFacebook fontSize={25} />
                 </Link>
                 <Link
                   className="flex items-center text-black hover:text-[#0a66c2] mr-6 no-underline transition-all transition-400 hover:translate-y-[-4px]"
-                  to="#"
-                >
+                  to="https://www.linkedin.com/company/96414344/admin/dashboard/"
+                  target="_blank"
+                  >
                   <FaLinkedin fontSize={25} />
                 </Link>
                 <Link
                   className="flex items-center text-black hover:text-rose-600 no-underline transition-all transition-400 hover:translate-y-[-4px]"
-                  to="#"
+                  to="https://www.instagram.com/mayawebtech"
+                  target="_blank"
                 >
                   <FaInstagram fontSize={25} />
                 </Link>

@@ -4,6 +4,7 @@ import "./index.css";
 import { FaStar } from "react-icons/fa";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ReviewHome = () => {
   const reviews = [
@@ -119,7 +120,7 @@ const ReviewHome = () => {
             as="button"
             className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
           >
-            <span>Learn More</span>
+            <Link to={"/about-us"}>Learn More</Link>
           </HoverBorderGradient>
         </div>
       </div>

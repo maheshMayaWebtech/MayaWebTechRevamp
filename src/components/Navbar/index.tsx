@@ -68,7 +68,7 @@ export function Navbar() {
                 href="/"
                 className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent hover:text-slate-500`}
               >
-                Home T
+                Home
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -107,20 +107,21 @@ export function Navbar() {
                         href="/services/mobile-development"
                         title="Mobile Development"
                       >
-                        Re-usable components built using Radix UI and Tailwind
-                        CSS.
+                        Empower your business with cutting-edge 
+                        mobile applications
                       </ListItem>
                       <ListItem
                         href="/services/web-services"
                         title="Web Services"
                       >
-                        How to install dependencies and structure your app.
+                        Crafting responsive, engaging, and high-performing
+                         websites
                       </ListItem>
                       <ListItem
                         href="/services/software-testing"
                         title="Software Testing"
                       >
-                        Styles for headings, paragraphs, lists...etc
+                        Ensuring your software is reliable, secure
                       </ListItem>
                     </div>
                     <div>
@@ -128,20 +129,19 @@ export function Navbar() {
                         href="/services/software-development"
                         title="Software Development"
                       >
-                        Re-usable components built using Radix UI and Tailwind
-                        CSS.
+                        Delivering robust and scalable software at Maya Web Tech
                       </ListItem>
                       <ListItem
                         href="/services/digital-marketing"
                         title="Digital Marketing"
                       >
-                        How to install dependencies and structure your app.
+                        Maximize your reach and engagement with our help.
                       </ListItem>
                       <ListItem
                         href="/services/web-hosting"
                         title="Web Hosting"
                       >
-                        Styles for headings, paragraphs, lists...etc
+                        Providing reliable and secure web hosting
                       </ListItem>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ export function Navbar() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
-                href="/docs"
+                href="https://mayape.in/"
                 className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent hover:text-slate-500`}
               >
                 MayaPe

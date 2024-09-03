@@ -7,6 +7,7 @@ import { ContactDrawer } from "@/common/ContactDrawer";
 import { Button } from "@/components/ui/button";
 import { LinkedinIcon, MailIcon, TwitterIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -61,30 +62,30 @@ const AboutUs = () => {
   const services = [
     {
       icon: <FaBuilding className="text-purple-500 text-3xl" />,
-      title: "Corporate Strategy",
+      title: "Innovative Solutions",
       description:
-        "Together we transform your business from the people to the processes.",
+        "We offer cutting-edge solutions that revolutionize your business operations.",
       bgColor: "bg-purple-100",
     },
     {
       icon: <FaLaptop className="text-yellow-500 text-3xl" />,
-      title: "Technology Services",
+      title: "Comprehensive Services",
       description:
-        "Together we transform your business from the people to the processes.",
+        "A complete suite of services tailored to meet all your business needs.",
       bgColor: "bg-yellow-100",
     },
     {
       icon: <FaBullhorn className="text-blue-500 text-3xl" />,
-      title: "Business Consulting",
+      title: "Client-Centric Approach",
       description:
-        "Together we transform your business from the people to the processes.",
+        "Our strategies are designed with a strong focus on client satisfaction and success.",
       bgColor: "bg-blue-100",
     },
     {
       icon: <FaLeaf className="text-green-500 text-3xl" />,
-      title: "Excellence",
+      title: "Proven Track Record",
       description:
-        "Together we transform your business from the people to the processes.",
+        "We have a history of delivering successful outcomes for our clients.",
       bgColor: "bg-green-100",
     },
   ];
@@ -115,15 +116,17 @@ const AboutUs = () => {
             solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-red-700 text-white py-2 px-6 rounded-full hover:bg-red-800 transition">
-              Read More
-            </button>
             <button
+              className="bg-red-700 text-white py-2 px-6 rounded-full hover:bg-red-800 transition"
               onClick={() => setOpenDrawer(true)}
-              className="text-red-700 py-2 px-6 rounded-full border-[1px] border-red-700 transition"
             >
-              Contact Us
+              Get Started
             </button>
+            <Link to={"/contact-us"}>
+              <button className="text-red-700 py-2 px-6 rounded-full border-[1px] border-red-700 transition">
+                Contact Us
+              </button>
+            </Link>
           </div>
         </motion.div>
 
@@ -164,9 +167,11 @@ const AboutUs = () => {
                   long-lasting partnerships with our clients.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-4">
+                <Link to={"/contact-us"}>
                   <Button variant="outline" size="lg">
                     Contact Us
                   </Button>
+                </Link>
                 </div>
               </motion.div>
             </div>
@@ -211,6 +216,7 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
+            onClick={() => setOpenDrawer(true)}
           >
             Get Started
           </motion.button>
@@ -309,7 +315,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+      {/* <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
         <div className="container px-4 md:px-6">
           <div className="space-y-4 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -359,7 +365,7 @@ const AboutUs = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       <ContactDrawer isOpen={openDrawer} handleChange={setOpenDrawer} />
     </div>
   );

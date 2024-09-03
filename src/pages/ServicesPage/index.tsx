@@ -5,6 +5,7 @@ import ServiceCards from "@/common/ServiceCards";
 import "./index.css";
 import { MovingCards } from "@/components/MovingCards";
 import LetsTalkFooter from "@/components/LetsTalkFooter";
+import { Link } from "react-router-dom";
 
 export function HighlightHero() {
   return (
@@ -59,15 +60,17 @@ const ServicesPage: React.FC = () => {
             How we work is changing, and businesses must find new and better
             ways to communicate.
           </motion.p>
-          <motion.button
-            className="bg-red-700 text-white py-2 px-6 rounded-lg hover:bg-red-800 transition"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            Get Started
-          </motion.button>
+          <Link to={"/contact-us"}>
+            <motion.button
+              className="bg-red-700 text-white py-2 px-6 rounded-lg hover:bg-red-800 transition"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              Get Started
+            </motion.button>
+          </Link>
         </div>
       </div>
       <section className="py-16 sm:pt-40">
@@ -98,9 +101,11 @@ const ServicesPage: React.FC = () => {
                   Progressively reinvent models and niche revolutionary benefits
                   for integrated niches.
                 </p>
-                <button className="mt-4 bg-red-700 text-white py-2 px-4 rounded hover:bg-red-800">
-                  Start For Free
-                </button>
+                <Link to={"/contact-us"}>
+                  <button className="mt-4 bg-red-700 text-white py-2 px-4 rounded hover:bg-red-800">
+                    Start For Free
+                  </button>
+                </Link>
               </div>
               <div className="absolute right-0 bottom-0 w-2/5">
                 <img
@@ -128,9 +133,11 @@ const ServicesPage: React.FC = () => {
                   Progressively reinvent models and niche revolutionary benefits
                   for integrated niches.
                 </p>
-                <button className="mt-4 bg-red-700 text-white py-2 px-4 rounded hover:bg-red-800">
-                  Start For Free
-                </button>
+                <Link to={"/contact-us"}>
+                  <button className="mt-4 bg-red-700 text-white py-2 px-4 rounded hover:bg-red-800">
+                    Start For Free
+                  </button>
+                </Link>
               </div>
               <div className="absolute right-0 bottom-0 w-2/5">
                 <img

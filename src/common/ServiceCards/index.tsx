@@ -38,7 +38,7 @@ const services: Service[] = [
     redirect: "/services/software-development",
   },
   {
-    title: "Web Development",
+    title: "Web Services",
     description:
       "Crafting responsive, engaging, and high-performing websites tailored to your business needs, ensuring a strong online presence.",
     number: "03",

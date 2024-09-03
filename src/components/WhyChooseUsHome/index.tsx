@@ -65,7 +65,7 @@ const WhyChooseUsHome = () => {
       <div className="text-3xl md:text-6xl font-semibold dark:text-white text-center">
         Why <span className="text-red-700">Choose Us?</span>
         <div className="text-lg font-light sm:font-medium sm:text-3xl mt-8">
-          More Than 24+ Years Experience We Provide IT Services
+          We Provide IT Services with Excellence
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 max-w-7xl mx-auto">

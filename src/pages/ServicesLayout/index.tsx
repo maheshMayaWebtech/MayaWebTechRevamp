@@ -5,9 +5,12 @@ import { motion } from "framer-motion";
 import { features, services } from "@/constants/servicesConstant";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import webDemoImage from "../../../public/web_design_demo.webp";
+import { useState } from "react";
+import { ContactDrawer } from "@/common/ContactDrawer";
 
 const ServicesLayout = () => {
   const { service } = useParams();
+  const [openDrawer, setOpenDrawer] = useState(false);
   const serviceContent =
     services.find(
       (s) => s.title.toLowerCase().replace(/\s+/g, "-") === service
@@ -52,18 +55,21 @@ const ServicesLayout = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
+              onClick={() => setOpenDrawer(true)}
             >
               Get Started
             </motion.button>
-            <motion.button
-              className="w-40 h-10 rounded-xl bg-white text-red-700 border border-red-700  text-sm"
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              Contact Us
-            </motion.button>
+            <Link to={"/contact-us"}>
+              <motion.button
+                className="w-40 h-10 rounded-xl bg-white text-red-700 border border-red-700  text-sm"
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                Contact Us
+              </motion.button>
+            </Link>
           </div>
         </div>
       </div>
@@ -92,7 +98,11 @@ const ServicesLayout = () => {
                 </p>
               </motion.div>
               <div className="sm:w-5/12 min-h-96 flex items-center">
-                <img className="" src={feature?.url || serviceImage} alt="serviceImage" />
+                <img
+                  className=""
+                  src={feature?.url || serviceImage}
+                  alt="serviceImage"
+                />
               </div>
             </motion.div>
           ))}
@@ -136,13 +146,13 @@ const ServicesLayout = () => {
             designed website or landing page.
           </p>
           <Link to={"/contact-us"}>
-          <button
-            style={{ border: "1px solid" }}
-            className="bg-white text-red-700 border-red-700 font-bold px-6 py-3 hover:bg-red-700 hover:text-white rounded-lg transition duration-300"
+            <button
+              style={{ border: "1px solid" }}
+              className="bg-white text-red-700 border-red-700 font-bold px-6 py-3 hover:bg-red-700 hover:text-white rounded-lg transition duration-300"
             >
-            Contact Us Now
-          </button>
-            </Link>
+              Contact Us Now
+            </button>
+          </Link>
         </motion.div>
         <div className="md:w-1/2 mt-12 md:mt-0 md:pl-1 space-y-8 text-left">
           {features.map((feature, index) => (
@@ -183,15 +193,16 @@ const ServicesLayout = () => {
             source files. All plans include unlimited requests, unlimited
             revisions, and source files.
           </p>
-          <button
+          <Link
+            to={"/contact-us"}
+            className="bg-white text-red-700 border-red-700 font-bold px-6 py-3 hover:bg-red-700 hover:text-white rounded-lg transition duration-300 text-center"
             style={{ border: "1px solid" }}
-            className="bg-white text-red-700 border-red-700 font-bold px-6 py-3 hover:bg-red-700 hover:text-white rounded-lg transition duration-300"
           >
             Contact Us Now
-          </button>
+          </Link>
         </div>
         <motion.div
-          initial={{ opacity: 0, scaleX: 2, scaleY: 2, x: -200}}
+          initial={{ opacity: 0, scaleX: 2, scaleY: 2, x: -200 }}
           whileInView={{ opacity: 1, scaleX: 1, scaleY: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
@@ -199,6 +210,7 @@ const ServicesLayout = () => {
           <img className="" width={600} src={webDemoImage} alt="serviceImage" />
         </motion.div>
       </div>
+      <ContactDrawer isOpen={openDrawer} handleChange={setOpenDrawer} />
     </div>
   );
 };

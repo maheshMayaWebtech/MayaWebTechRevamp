@@ -26,36 +26,40 @@ export function MovingCards() {
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+      "They boosted our search engine rankings and optimized our content strategy. The difference in our online presence is remarkable. Highly recommended!",
+    name: "Arnav",
+    title: "CEO",
     url: "/Fincafe.png",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
+      "The team is super dedicated to their work and always tries to deliver the best results. Very great at communicating, making it easy and smooth.",
+    name: "Ben Vanspringel",
+    title: "Sr. Software engineer",
     url: "/dcp.png",
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+    quote: "Their digital marketing strategies have brought in more qualified leads, and our social media following has grown substantially. They’re always on top of the latest trends, and it shows in the results. Fantastic service!",
+    name: "Ajit Singh",
+    title: "Manager",
     url: "/rooh.png",
   },
   {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
-    url: "/webwise.png",
+    quote: "The team was professional, creative, and always willing to go the extra mile to ensure I was happy with the final product",
+    name: "Vipul Panwar",
+    title: "YFL team",
+    url: "/ladder.png",
   },
   {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
-    url: "/ladder.png",
+    quote: "The attention to detail and commitment to quality were evident throughout the entire process. The app is not only beautiful but also highly functional, and it’s been a huge hit with my customers.",
+    name: "Hardeep Saini",
+    title: "CEO",
+    url: "/lekhaJokhaPng.png",
+  },
+  {
+    quote: "The entire process was efficient, and they kept me informed every step of the way. I highly recommend them for any web development project!",
+    name: "Chagan Singh",
+    title: "CEO",
+    url: "/chagan.png",
   },
 ];

@@ -6,6 +6,7 @@ import "./index.css";
 import { Badge } from "../ui/badge";
 import { ContactDrawer } from "@/common/ContactDrawer";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Hero() {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -53,15 +54,17 @@ export function Hero() {
           />
         </div>
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-          <button className="w-40 h-10 rounded-xl bg-red-700 border dark:border-white border-transparent text-white text-sm">
+          <button
+            className="w-40 h-10 rounded-xl bg-red-700 border dark:border-white border-transparent text-white text-sm"
+            onClick={() => setOpenDrawer(true)}
+          >
             Get Started
           </button>
-          <button
-            onClick={() => setOpenDrawer(true)}
-            className="w-40 h-10 rounded-xl bg-white text-red-700 border border-red-700  text-sm"
-          >
+          <Link to={"/contact-us"}>
+          <button className="w-40 h-10 rounded-xl bg-white text-red-700 border border-red-700  text-sm">
             Contact Us
           </button>
+          </Link>
         </div>
       </motion.div>
       <ContactDrawer isOpen={openDrawer} handleChange={setOpenDrawer} />

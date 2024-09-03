@@ -1,5 +1,5 @@
 import { useId } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./index.css";
 import { industryData } from "@/constants/industry";
 import LetsTalkFooter from "@/components/LetsTalkFooter";
@@ -55,14 +55,14 @@ const IndustryLayout = () => {
               as="button"
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
-              <span>Book Demo</span>
+              <Link to={"/contact-us"}>Book Demo</Link>
             </HoverBorderGradient>
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
-              <span>Back to Home</span>
+              <Link to={"/"}>Back to Home</Link>
             </HoverBorderGradient>
           </motion.div>
         </div>

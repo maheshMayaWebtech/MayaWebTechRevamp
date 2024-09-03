@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const logos = [
   "/Fincafe.png",
@@ -6,6 +6,8 @@ const logos = [
   "/rooh.png",
   "/webwise.png",
   "/ladder.png",
+  "/chagan.png",
+  "/lekhaJokhaPng.png",
 ];
 
 const CompaniesServed = () => {
@@ -28,7 +30,10 @@ const CompaniesServed = () => {
           }}
         >
           {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
-            <div key={index} className="flex items-center justify-center flex-none h-24">
+            <div
+              key={index}
+              className="flex items-center justify-center flex-none h-24"
+            >
               <img
                 src={logo}
                 alt={`Logo ${index + 1}`}
