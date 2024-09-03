@@ -265,7 +265,7 @@ export function Navbar() {
             )}
           </li>
           <li>
-            <Link onClick={toggleDrawer} to="/blogs">
+            <Link onClick={toggleDrawer} to="https://mayape.in/" target="_blank">
               MayaPe
             </Link>
           </li>

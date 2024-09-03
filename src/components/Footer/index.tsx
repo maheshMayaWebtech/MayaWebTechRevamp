@@ -49,7 +49,7 @@ const Footer = () => {
               className="mb-4"
             />
             <h4 className="py-4 text-gray-700 text-left w-64">
-              T-04, A-44, near sector-15 Metro Station, <br />{" "}
+              T-04 3rd Floor, A-44, <br />{" "}
               Sector 2, Noida, Uttar Pradesh <br /> 201301
             </h4>
             <Link
@@ -113,7 +113,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="pt-4 mt-4 pt-6 text-gray-600 border-t border-gray-800 text-center">
-          © {year} Maya Web Tech. All rights reserved.
+          © {year} Webwise Studio Pvt. Ltd. All rights reserved.
         </div>
       </footer>
     </>

@@ -41,7 +41,7 @@ export function Hero() {
           </Badge>
         </div>
         <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
-          Your one-stop solution
+          Your One-Stop Solution
           <br />
           <div className="font-medium mt-2">
             <FlipWords words={words} />
