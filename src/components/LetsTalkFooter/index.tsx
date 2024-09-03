@@ -11,8 +11,8 @@ const LetsTalkFooter = () => {
   return (
     <div className="letsTalkFooterMain py-16 mt-16 px-4">
       <div className="text-2xl sm:text-5xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
-        Let’s Talk About
-        <FlipWords words={words} className="font-medium text-red-700 " />
+        Let’s Talk About <div className="font-medium text-red-700 sm:hidden">Services</div>
+        <FlipWords words={words} className="hidden sm:flex justify-center font-medium text-red-700 " />
       </div>
       <div className="py-8">
         Since you made it all the way down here, <br /> book a personalized demo

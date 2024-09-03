@@ -14,7 +14,9 @@
     }
     .reviewImageReviews {
         position: relative !important;
-        width: 100% !important;
+        width: 90% !important;
+        display: flex;
+        justify-content: center;
         margin-bottom: 30px;
     }
 }

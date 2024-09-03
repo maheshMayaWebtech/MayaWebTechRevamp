@@ -48,8 +48,8 @@ const ServicesLayout = () => {
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-8">
             <motion.button
               className="w-40 h-10 rounded-xl bg-red-700 border dark:border-white border-transparent text-white text-sm"
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: -100 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
@@ -57,8 +57,8 @@ const ServicesLayout = () => {
             </motion.button>
             <motion.button
               className="w-40 h-10 rounded-xl bg-white text-red-700 border border-red-700  text-sm"
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
@@ -75,23 +75,23 @@ const ServicesLayout = () => {
             <motion.div
               key={index}
               className={`serviceKeyFeatures gap-10 text-left items-center justify-between`}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: index % 2 === 0 ? -40 : 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <motion.div className="flex flex-col gap-3 w-7/12">
+              <motion.div className="flex flex-col gap-3 sm:w-7/12">
                 <h3 className="text-xl sm:text-2xl font-bold text-red-700 sm:mb-2">
                   {feature.title}
                 </h3>
                 <h3 className="text-4xl font-semibold sm:font-extrabold mb-2">
                   {feature.subtitle}
                 </h3>
-                <p className="text-gray-600 sm:text-xl w-9/12">
+                <p className="text-gray-600 sm:text-xl sm:w-9/12">
                   {feature.description}
                 </p>
               </motion.div>
-              <div className="w-5/12 min-h-96 flex items-center">
+              <div className="sm:w-5/12 min-h-96 flex items-center">
                 <img className="" src={feature?.url || serviceImage} alt="serviceImage" />
               </div>
             </motion.div>
@@ -147,8 +147,8 @@ const ServicesLayout = () => {
             <motion.div
               className="flex items-start gap-2 sm:gap-6"
               key={index}
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
             >

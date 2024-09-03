@@ -158,20 +158,23 @@ export const services = [
       {
         title: "Better Personalization",
         description:
-          "Our digital marketing agency excels in personalization, tailoring strategies to meet each customer's unique needs. We focus on boosting sales and conversions by understanding client demands and delivering targeted marketing solutions efficiently.",
+        "Our digital marketing agency excels in personalization, tailoring strategies to meet each customer's unique needs. We focus on boosting sales and conversions by understanding client demands and delivering targeted marketing solutions efficiently.",
         subtitle: "Tailored for Your Needs",
+        url: '/services/betterPersonalization.png'
       },
       {
         title: "Better Cost",
         description:
-          "We offer digital marketing services that are budget-friendly. Our goal is to provide effective solutions within a reasonable budget, ensuring you get the best results without overspending, making digital marketing accessible for all.",
+        "We offer digital marketing services that are budget-friendly. Our goal is to provide effective solutions within a reasonable budget, ensuring you get the best results without overspending, making digital marketing accessible for all.",
         subtitle: "Affordable and Budget-Friendly",
+        url: '/services/betterCost.png'
       },
       {
         title: "Better Environment",
         description:
-          "We create user-friendly content that resonates with your target audience. Our focus is on delivering web design and digital marketing services that ensure clear communication and a positive user experience, driving engagement and success.",
+        "We create user-friendly content that resonates with your target audience. Our focus is on delivering web design and digital marketing services that ensure clear communication and a positive user experience, driving engagement and success.",
         subtitle: "User-Friendly and Effective",
+        url: '/services/betterEnv.png'
       },
       {
         title: "Better Security",

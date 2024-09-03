@@ -38,13 +38,13 @@ const ReviewHome = () => {
   return (
     <div className="flex flex-col sm:flex-row justify-between px-4 sm:px-28 gap-16 py-16 sm:py-16">
       <motion.div
-        initial={{ opacity: 0, x: -90 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: -90 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1, ease: "easeOut" }}
         className="relative"
       >
-        <div>
+        <div className="flex flex-col gap-12 justify-center">
           <img
             src={"/allTeam.png"}
             alt="Review Image"
@@ -94,11 +94,7 @@ const ReviewHome = () => {
           </div>
         </div>
       </motion.div>
-      <motion.div
-        initial={{ opacity: 0, x: 90 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+      <div
         className="ratingRightContent flex flex-col gap-8 w-auto text-left justify-center px-2 sm:pl-12"
       >
         <div className="space-y-8">
@@ -126,7 +122,7 @@ const ReviewHome = () => {
             <span>Learn More</span>
           </HoverBorderGradient>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

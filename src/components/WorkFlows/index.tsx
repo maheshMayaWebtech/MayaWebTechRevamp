@@ -78,7 +78,7 @@ const steps: Step[] = [
 
 export const WorkFlows: React.FC = () => {
   return (
-    <div className="py-12 px-4 sm:px-28 bg-white">
+    <div className="py-12 sm:px-28 bg-white">
       <div className="text-3xl md:text-6xl font-semibold dark:text-white text-center mb-16 sm:mb-28">
         Our Workflow
         <div className="text-xl mt-4 md:text-xl">
@@ -96,11 +96,11 @@ export const WorkFlows: React.FC = () => {
           return (
           <motion.div
             key={index}
-            className={`flex w-full ${
+            className={`flex px-4 sm:w-full ${
               isEven ? "justify-start" : "justify-end"
             } z-[9]`}
-            initial={{ opacity: 0, x: isEven ? -50 : 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: isEven ? -50 : 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
             viewport={{ once: true }}
           >

@@ -5,7 +5,6 @@ import { MovingCards } from "../MovingCards";
 import { ServiceRequirements } from "../ServiceRequirements";
 import Steps from "../Steps";
 import { WorkShow } from "../WorkShow";
-import { WorkSteps } from "../WorkSteps";
 import { FAQ } from "../FAQ";
 import LetsTalkFooter from "../LetsTalkFooter";
 import { WorkFlows } from "../WorkFlows";
@@ -23,7 +22,6 @@ const Home = () => {
       <WorkFlows />
       <ServiceRequirements />
       <MovingCards />
-      {/* <WorkSteps /> */}
       <WorkShow />
       <HighlightHero />
       <ReviewHome />

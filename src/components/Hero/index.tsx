@@ -32,7 +32,7 @@ export function Hero() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4"
+        className="relative flex flex-col gap-4 items-center sm:justify-center px-4"
       >
         <div className="leadingTechHero">
           <Badge className="px-8 py-2" variant="secondary">
@@ -48,7 +48,7 @@ export function Hero() {
         </div>
         <div className="">
           <TypewriterEffectSmooth
-            className="lg:text-sm lg:font-medium md:text-2xl md:font-medium"
+            className="hidden sm:flex lg:text-sm lg:font-medium md:text-2xl md:font-medium"
             words={wordsTypeWriter}
           />
         </div>

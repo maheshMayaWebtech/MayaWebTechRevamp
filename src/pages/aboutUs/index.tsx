@@ -101,8 +101,8 @@ const AboutUs = () => {
         />
         <motion.div
           className="relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left w-full sm:w-6/12"
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
@@ -142,8 +142,8 @@ const AboutUs = () => {
             <div className="flex flex-col justify-center space-y-4">
               <motion.div
                 className="space-y-8"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
@@ -171,8 +171,8 @@ const AboutUs = () => {
               </motion.div>
             </div>
             <motion.img
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
               viewport={{ once: true }}
               src="/about-team.svg"

@@ -81,8 +81,8 @@ const ServiceCards: React.FC = () => {
           key={index}
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.2 }}
           viewport={{ once: true }}
           className={`relative group rounded-lg overflow-hidden shadow-lg p-4 sm:p-8 sm:px-12 service-card ${
