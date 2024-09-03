@@ -1,18 +1,18 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
-import {Navbar} from "./components/Navbar";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Navbar } from "./components/Navbar";
+import { Toaster } from "./components/ui/toaster";
+import ScrollToTop from "./hooks/scrollToTop";
+import Disclaimer from "./pages/Disclaimer";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndCondition";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/Contact";
 import IndustryLayout from "./pages/IndustryLayout";
 import ServicesPage from "./pages/ServicesPage";
 import ServicesLayout from "./pages/ServicesLayout";
-import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/Contact";
-import { Toaster } from "./components/ui/toaster";
-import ScrollToTop from "./hooks/scrollToTop";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsAndConditions from "./pages/TermsAndCondition";
-import Disclaimer from "./pages/Disclaimer";
 
 function App() {
   return (
