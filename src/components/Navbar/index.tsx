@@ -104,20 +104,20 @@ export function Navbar() {
                   <div className="flex text-left">
                     <div>
                       <ListItem
-                        href="/services/mobile-development"
+                        to="/services/mobile-development"
                         title="Mobile Development"
                       >
                         Re-usable components built using Radix UI and Tailwind
                         CSS.
                       </ListItem>
                       <ListItem
-                        href="/services/web-services"
+                        to="/services/web-services"
                         title="Web Services"
                       >
                         How to install dependencies and structure your app.
                       </ListItem>
                       <ListItem
-                        href="/services/software-testing"
+                        to="/services/software-testing"
                         title="Software Testing"
                       >
                         Styles for headings, paragraphs, lists...etc
@@ -125,20 +125,20 @@ export function Navbar() {
                     </div>
                     <div>
                       <ListItem
-                        href="/services/software-development"
+                        to="/services/software-development"
                         title="Software Development"
                       >
                         Re-usable components built using Radix UI and Tailwind
                         CSS.
                       </ListItem>
                       <ListItem
-                        href="/services/digital-marketing"
+                        to="/services/digital-marketing"
                         title="Digital Marketing"
                       >
                         How to install dependencies and structure your app.
                       </ListItem>
                       <ListItem
-                        href="/services/web-hosting"
+                        to="/services/web-hosting"
                         title="Web Hosting"
                       >
                         Styles for headings, paragraphs, lists...etc
@@ -163,7 +163,7 @@ export function Navbar() {
                       <ListItem
                         key={component.title}
                         title={component.title}
-                        href={component.href}
+                        to={component.href}
                       >
                         {component.description}
                       </ListItem>
@@ -308,28 +308,26 @@ export function Navbar() {
   );
 }
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+interface ListItemProps {
+  to: string;
+  title: string;
+  children: React.ReactNode;
+}
+const ListItem: React.FC<ListItemProps> = ({ to, title, children }) => {
   return (
     <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
+      <Link
+        to={to}
+        className={cn(
+          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+        )}
+      >
+        <div className="text-sm font-medium leading-none">{title}</div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </a>
-      </NavigationMenuLink>
+      </Link>
     </li>
   );
-});
+};
 ListItem.displayName = "ListItem";
