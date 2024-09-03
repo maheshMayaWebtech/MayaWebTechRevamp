@@ -1,16 +1,16 @@
 import { EvervaultCardDemo } from "@/common/HoverCard";
-import "./index.css";
-import { Cover } from "../ui/cover";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { Cover } from "../ui/cover";
+import "./index.css";
 
 const Steps = () => {
   const titleControls = useAnimation();
   const cardsControls = useAnimation();
 
   const { ref: titleRef, inView: titleInView } = useInView({ threshold: 0.1 });
-  const { ref: cardsRef, inView: cardsInView } = useInView({ threshold: 0.1 });
+  const { inView: cardsInView } = useInView({ threshold: 0.1 });
 
   useEffect(() => {
     if (titleInView) {

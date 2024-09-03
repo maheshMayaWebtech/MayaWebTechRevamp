@@ -1,9 +1,8 @@
 "use client";
-import React, { useEffect, useId, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { useRef } from "react";
-import { cn } from "@/lib/utils";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useId, useRef, useState } from "react";
 
 export const Cover = ({
   children,
@@ -138,9 +137,9 @@ export const Cover = ({
         {children}
       </motion.span>
       <CircleIcon className="absolute -right-[2px] -top-[2px]" />
-      <CircleIcon className="absolute -bottom-[2px] -right-[2px]" delay={0.4} />
-      <CircleIcon className="absolute -left-[2px] -top-[2px]" delay={0.8} />
-      <CircleIcon className="absolute -bottom-[2px] -left-[2px]" delay={1.6} />
+      <CircleIcon className="absolute -bottom-[2px] -right-[2px]" />
+      <CircleIcon className="absolute -left-[2px] -top-[2px]" />
+      <CircleIcon className="absolute -bottom-[2px] -left-[2px]" />
     </div>
   );
 };
@@ -210,13 +209,7 @@ export const Beam = ({
   );
 };
 
-export const CircleIcon = ({
-  className,
-  delay,
-}: {
-  className?: string;
-  delay?: number;
-}) => {
+export const CircleIcon = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(

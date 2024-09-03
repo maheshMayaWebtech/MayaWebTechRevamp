@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./index.css";
 import serviceImage from "../../../public/services_image.webp";
 import { motion } from "framer-motion";
@@ -135,12 +135,14 @@ const ServicesLayout = () => {
             Attract, engage, and convert potential clients with a professionally
             designed website or landing page.
           </p>
+          <Link to={"/contact-us"}>
           <button
             style={{ border: "1px solid" }}
             className="bg-white text-red-700 border-red-700 font-bold px-6 py-3 hover:bg-red-700 hover:text-white rounded-lg transition duration-300"
-          >
-            Pick Your Plan
+            >
+            Contact Us Now
           </button>
+            </Link>
         </motion.div>
         <div className="md:w-1/2 mt-12 md:mt-0 md:pl-1 space-y-8 text-left">
           {features.map((feature, index) => (

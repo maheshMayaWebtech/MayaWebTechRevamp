@@ -1,16 +1,15 @@
 import { HighlightHero } from "@/common/HighlightHero";
 import CompaniesServed from "../CompaniesServed";
+import { FAQ } from "../FAQ";
 import { Hero } from "../Hero";
+import LetsTalkFooter from "../LetsTalkFooter";
 import { MovingCards } from "../MovingCards";
+import ReviewHome from "../ReviewHome";
 import { ServiceRequirements } from "../ServiceRequirements";
 import Steps from "../Steps";
-import { WorkShow } from "../WorkShow";
-import { FAQ } from "../FAQ";
-import LetsTalkFooter from "../LetsTalkFooter";
-import { WorkFlows } from "../WorkFlows";
 import WhyChooseUsHome from "../WhyChooseUsHome";
-import ReviewHome from "../ReviewHome";
-import ServiceCards from "@/common/ServiceCards";
+import { WorkFlows } from "../WorkFlows";
+import { WorkShow } from "../WorkShow";
 
 const Home = () => {
   return (

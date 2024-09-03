@@ -1,7 +1,6 @@
-import { url } from "inspector";
-import codingImage from "../../public/coding.png";
-import { FaEye, FaChartLine } from "react-icons/fa";
+import { FaChartLine, FaEye } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
+import codingImage from "../../public/coding.png";
 
 export const features = [
   {
@@ -179,8 +178,9 @@ export const services = [
       {
         title: "Better Security",
         description:
-          "We prioritize security in our digital marketing services, ensuring that your data is protected. Our comprehensive approach maintains the safety of your information and helps track audience behavior effectively, providing reliable and secure solutions.",
+        "We prioritize security in our digital marketing services, ensuring that your data is protected. Our comprehensive approach maintains the safety of your information and helps track audience behavior effectively, providing reliable and secure solutions.",
         subtitle: "Secure and Reliable Solutions",
+        url: '/services/betterSecurity.svg'
       },
     ],
   },
@@ -261,30 +261,35 @@ export const services = [
         description:
           "We ensure thorough analysis during the development process by distinguishing between developer and tester roles. Our approach includes detailed requirement analysis and effective user testing platforms to meet your business needs.",
         subtitle: "Comprehensive Requirement Analysis",
+        url: "/services/betterAnalysis.png"
       },
       {
         title: "Better Security",
         description:
-          "Our planning phase covers software functionality, usability, and security, providing detailed test scenarios and data. We use advanced test management software to ensure your web development services meet the highest security standards.",
+        "Our planning phase covers software functionality, usability, and security, providing detailed test scenarios and data. We use advanced test management software to ensure your web development services meet the highest security standards.",
         subtitle: "Enhanced Online Security",
+        url: "/services/betterSecurity.png"
       },
       {
         title: "Better Development",
         description:
-          "We document test cases and results through our test management tool. This process helps developers identify and correct issues, improving their practices. Our approach ensures high-quality development and comprehensive software testing.",
+        "We document test cases and results through our test management tool. This process helps developers identify and correct issues, improving their practices. Our approach ensures high-quality development and comprehensive software testing.",
         subtitle: "Thorough Development Process",
+        url: "/services/betterDev.png"
       },
       {
         title: "Better Execution",
         description:
-          "We offer both manual and automated testing methods. Manual testing is used for insights and detailed judgment, while automation addresses repetitive tasks and minor adjustments. Our goal is precise execution for effective results.",
+        "We offer both manual and automated testing methods. Manual testing is used for insights and detailed judgment, while automation addresses repetitive tasks and minor adjustments. Our goal is precise execution for effective results.",
         subtitle: "Accurate Testing Execution",
+        url: "/services/betterExecution.png"
       },
       {
         title: "Better Support",
         description:
-          "We provide end-to-end support throughout the web development process, including comprehensive security testing. Our commitment is to deliver reliable results and ongoing support, ensuring customer satisfaction from start to finish.",
+        "We provide end-to-end support throughout the web development process, including comprehensive security testing. Our commitment is to deliver reliable results and ongoing support, ensuring customer satisfaction from start to finish.",
         subtitle: "Ongoing Support and Assurance",
+        url: "/services/betterSupport.png"
       },
     ],
   },
@@ -307,24 +312,28 @@ export const services = [
         description:
           "We ensure a deep understanding of customer needs, offering top-notch hosting services within our web development package. Our approach aligns with your requirements, delivering comprehensive web hosting solutions tailored to your needs.",
         subtitle: "Comprehensive Requirement Understanding",
+        url: "/services/betterReq.png"
       },
       {
         title: "Better Process",
         description:
-          "With advanced tools and techniques, we provide seamless hosting and domain services. Our solutions ensure you benefit from reliable web development and hosting, simplifying your experience with efficient, effective services.",
+        "With advanced tools and techniques, we provide seamless hosting and domain services. Our solutions ensure you benefit from reliable web development and hosting, simplifying your experience with efficient, effective services.",
         subtitle: "Streamlined Hosting Process",
+        url: "/services/betterProcess.png"
       },
       {
         title: "Better Support",
         description:
-          "As a leading hosting provider, we offer exceptional support for any issues related to web hosting services. Our commitment is to ensure customer satisfaction through dedicated assistance and reliable web hosting solutions.",
+        "As a leading hosting provider, we offer exceptional support for any issues related to web hosting services. Our commitment is to ensure customer satisfaction through dedicated assistance and reliable web hosting solutions.",
         subtitle: "Dedicated Support Services",
+        url: "/services/betterSupport.png"
       },
       {
         title: "Better Results",
         description:
-          "We deliver outstanding results with our web hosting services, ensuring customer satisfaction. Our top-tier hosting solutions provide excellent performance, reflecting our commitment to quality and effective web hosting in the market.",
+        "We deliver outstanding results with our web hosting services, ensuring customer satisfaction. Our top-tier hosting solutions provide excellent performance, reflecting our commitment to quality and effective web hosting in the market.",
         subtitle: "Outstanding Service Results",
+        url: "/services/betterResult.png"
       },
     ],
   },
