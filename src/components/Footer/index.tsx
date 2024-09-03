@@ -41,7 +41,7 @@ const Footer = () => {
     <>
       <footer className="text-gray-800 pt-12 px-4 mt-16 pb-4 bg-gradient-to-t from-rose-100 via-white to-white ">
         <div className="mx-auto px-4 container overflow-hidden flex flex-col lg:flex-row justify-between">
-          <Link to="/" className="block mr-4 ">
+          <div className="block mr-4 ">
             <img
               src="/mayaWebTechLogoMain.png"
               alt="logo"
@@ -60,7 +60,7 @@ const Footer = () => {
               <MapPinIcon className="w-4 h-4 text-red-700" />
               View on Map
             </Link>
-          </Link>
+          </div>
           <div className="w-2/3 block sm:flex mt-6 lg:mt-0">
             {sections.map((section, index) => (
               <ul

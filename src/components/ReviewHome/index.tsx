@@ -14,25 +14,25 @@ const ReviewHome = () => {
     },
     {
       title: "Maya Web Tech is a great place to work with a supportive team.",
-      position: "DevOps",
+      position: "Software Engineer",
     },
     {
       title: "The work culture at Maya Web Tech encourages growth and learning.",
-      position: "DevOps",
+      position: "Cloud Engineer",
     },
   ];
   const reviewsGlass = [
     {
       title: "I feel a sense of pride working at Maya Web Tech.",
-      position: "DevOps",
+      position: "React Developer",
     },
     {
       title: "Maya Web Tech is a great place to work with a supportive team.",
-      position: "DevOps",
+      position: "PHP Developer",
     },
     {
       title: "The work culture at Maya Web Tech encourages growth and learning.",
-      position: "DevOps",
+      position: "Node Developer",
     },
   ];
 
@@ -52,7 +52,7 @@ const ReviewHome = () => {
             className="reviewImageSection"
           />
           <div className="reviewImageReviews absolute text-left top-20 right-0 sm:right-[-30px] w-[70%] text-sm bg-[#ffffff75] backdrop-blur-md shadow-lg flex flex-col gap-2 px-8 py-4 rounded-md pr-4">
-            <div className="absolute top-[-10px] text-xs font-semibold left-2 sm:left-[-40px] w-16 p-1">
+            <div className="absolute hidden sm:block top-[-10px] text-xs font-semibold left-2 sm:left-[-40px] w-16 p-1">
               <img src={greatPlace} alt="greatplace" className="rounded-md" />
             </div>
             <div className="text-lg font-semibold text-right">
